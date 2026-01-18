@@ -29,6 +29,12 @@ async function handleRequest(req: Request): Promise<Response> {
       headers: { "Content-Type": "text/html" },
     });
   }
+  if (url.pathname === "/styles.css") {
+    const css = await Bun.file("./public/styles.css").text();
+    return new Response(css, {
+      headers: { "Content-Type": "text/css" },
+    });
+  }
 
   return new Response("Not Found", { status: 404 });
 }
