@@ -43,7 +43,6 @@ async function handleRequest(req: Request): Promise<Response> {
     }
     return new Response("Not Found", { status: 404 });
   }
-
   return new Response("Not Found", { status: 404 });
 }
 
