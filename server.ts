@@ -22,7 +22,6 @@ async function handleRequest(req: Request): Promise<Response> {
       );
     }
   }
-
   if (url.pathname === "/" || url.pathname === "/index.html") {
     const html = await Bun.file("./public/index.html").text();
     return new Response(html, {
@@ -34,6 +33,15 @@ async function handleRequest(req: Request): Promise<Response> {
     return new Response(css, {
       headers: { "Content-Type": "text/css" },
     });
+  }
+  if (url.pathname.startsWith("/assets/")) {
+    const filePath = `./public${url.pathname}`;
+    const file = Bun.file(filePath);
+
+    if (await file.exists()) {
+      return new Response(file);
+    }
+    return new Response("Not Found", { status: 404 });
   }
 
   return new Response("Not Found", { status: 404 });
