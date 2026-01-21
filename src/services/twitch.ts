@@ -76,29 +76,40 @@ export async function getLiveStreams(
   const clientId = process.env.TWITCH_CLIENT_ID!;
 
   // max 100 user_login params per request
-  const params = new URLSearchParams();
-  twitchUsernames.forEach((username) => params.append("user_login", username));
-
-  const response = await fetch(
-    `https://api.twitch.tv/helix/streams?${params.toString()}`,
-    {
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Client-Id": clientId,
-      },
-    },
-  );
-
-  if (!response.ok) {
-    throw new Error(`Failed to fetch streams: ${response.status}`);
-  }
-
-  const data: TwitchStreamsResponse = await response.json();
-
+  const BATCH_SIZE = 100;
   const liveMap = new Map<string, TwitchStream>();
-  for (const stream of data.data) {
-    liveMap.set(stream.user_login.toLowerCase(), stream);
+
+  for (let i = 0; i < twitchUsernames.length; i += BATCH_SIZE) {
+    const batch = twitchUsernames.slice(i, i + BATCH_SIZE);
+    const params = new URLSearchParams();
+    batch.forEach((username) => params.append("user_login", username));
+
+    console.log(
+      `[Twitch] Fetching batch ${Math.floor(i / BATCH_SIZE) + 1} (${batch.length} users)`,
+    );
+
+    const response = await fetch(
+      `https://api.twitch.tv/helix/streams?${params.toString()}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Client-Id": clientId,
+        },
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch streams: ${response.status}`);
+    }
+
+    const data: TwitchStreamsResponse = await response.json();
+
+    for (const stream of data.data) {
+      liveMap.set(stream.user_login.toLowerCase(), stream);
+    }
   }
+
+  console.log(`[Twitch] Found ${liveMap.size} live streams`);
 
   return streamers.map((streamer) => {
     const twitchUsername = streamer.twitchUsername?.toLowerCase();
