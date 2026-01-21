@@ -17,19 +17,69 @@ async function fetchFreshData(): Promise<StreamStatus[]> {
   const mergedResults: StreamStatus[] = streamers.map((streamer) => {
     const twitchStatus = twitchResults.find((s) => s.name === streamer.name);
     const kickStatus = kickResults.find((s) => s.name === streamer.name);
+    const twitchLive = twitchStatus?.isLive || false;
+    const kickLive = kickStatus?.isLive || false;
 
-    if (kickStatus?.isLive) {
-      return kickStatus;
+    if (twitchLive && kickLive) {
+      return {
+        ...streamer,
+        isLive: true,
+        platform: "both" as const,
+        title:
+          (kickStatus!.viewerCount || 0) >= (twitchStatus!.viewerCount || 0)
+            ? kickStatus!.title
+            : twitchStatus!.title,
+        viewerCount: Math.max(
+          kickStatus!.viewerCount || 0,
+          twitchStatus!.viewerCount || 0,
+        ),
+        thumbnailUrl: twitchStatus!.thumbnailUrl,
+        startedAt: twitchStatus!.startedAt,
+        twitch: {
+          isLive: true,
+          title: twitchStatus!.title,
+          viewerCount: twitchStatus!.viewerCount,
+          thumbnailUrl: twitchStatus!.thumbnailUrl,
+          startedAt: twitchStatus!.startedAt,
+        },
+        kick: {
+          isLive: true,
+          title: kickStatus!.title,
+          viewerCount: kickStatus!.viewerCount,
+          thumbnailUrl: kickStatus!.thumbnailUrl,
+          startedAt: kickStatus!.startedAt,
+        },
+      };
     }
-    if (twitchStatus?.isLive) {
-      return twitchStatus;
+    if (kickLive) {
+      return {
+        ...kickStatus!,
+        kick: {
+          isLive: true,
+          title: kickStatus!.title,
+          viewerCount: kickStatus!.viewerCount,
+          thumbnailUrl: kickStatus!.thumbnailUrl,
+          startedAt: kickStatus!.startedAt,
+        },
+      };
+    }
+    if (twitchLive) {
+      return {
+        ...twitchStatus!,
+        twitch: {
+          isLive: true,
+          title: twitchStatus!.title,
+          viewerCount: twitchStatus!.viewerCount,
+          thumbnailUrl: twitchStatus!.thumbnailUrl,
+          startedAt: twitchStatus!.startedAt,
+        },
+      };
     }
     return {
       ...streamer,
       isLive: false,
     };
   });
-
   return mergedResults.sort((a, b) => {
     if (a.isLive && !b.isLive) return -1;
     if (!a.isLive && b.isLive) return 1;
@@ -51,8 +101,10 @@ export async function getStreams(): Promise<StreamStatus[]> {
     console.log("[cache] fetching fresh data...");
     cachedResults = await fetchFreshData();
     lastFetchTime = now;
+    const liveCount = cachedResults.filter((s) => s.isLive).length;
+    const dualCount = cachedResults.filter((s) => s.platform === "both").length;
     console.log(
-      `[cache] cached ${cachedResults.length} streamers, ${cachedResults.filter((s) => s.isLive).length} live`,
+      `[cache] cached ${cachedResults.length} streamers, ${liveCount} live, ${dualCount} dual-streaming`,
     );
     return cachedResults;
   } catch (error) {
