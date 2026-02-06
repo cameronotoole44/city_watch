@@ -22,14 +22,6 @@ interface TwitchStreamsResponse {
 let cachedToken: string | null = null;
 let tokenExpiry: number = 0;
 
-function getEnv(key: string): string | undefined {
-  const cfEnv = (globalThis as any).CF_ENV;
-  if (cfEnv && cfEnv[key]) {
-    return cfEnv[key];
-  }
-  return typeof process !== "undefined" ? process.env[key] : undefined;
-}
-
 async function getAccessToken(): Promise<string> {
   const now = Date.now();
 
@@ -37,8 +29,8 @@ async function getAccessToken(): Promise<string> {
     return cachedToken;
   }
 
-  const clientId = getEnv("TWITCH_CLIENT_ID");
-  const clientSecret = getEnv("TWITCH_CLIENT_SECRET");
+  const clientId = process.env.TWITCH_CLIENT_ID;
+  const clientSecret = process.env.TWITCH_CLIENT_SECRET;
 
   if (!clientId || !clientSecret) {
     throw new Error("Missing TWITCH_CLIENT_ID or TWITCH_CLIENT_SECRET");
@@ -81,7 +73,7 @@ export async function getLiveStreams(
   }
 
   const token = await getAccessToken();
-  const clientId = getEnv("TWITCH_CLIENT_ID")!;
+  const clientId = process.env.TWITCH_CLIENT_ID!;
 
   const BATCH_SIZE = 100;
   const liveMap = new Map<string, TwitchStream>();
