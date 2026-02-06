@@ -1,4 +1,4 @@
-# city_watch v0.1.2
+# city_watch
 
 ### **The Problem**
 
@@ -14,10 +14,29 @@ find out if your favorite NoPixel character(\*) is actually **in the city.**
 
 _\*whitelisted players_
 
-pulling data from nopixel.net for current nopixel V invites,
--see who is live on twitch and/or kick
--uptime
--viewer count
--stream title
--list of offline streamers
--click live card to head directly to stream on twitch/kick
+### **Features**
+
+- see who is live on Twitch and/or Kick
+- uptime
+- viewer count
+- character name
+- stream title
+- list of offline streamers
+- click live card to head directly to stream
+
+---
+
+## ![city_watch screenshot](/public/assets/v0.2.0-ui.png)
+
+## Changelog
+
+### 0.2.0
+
+- Kick integration
+- dual streaming support
+- caching
+
+### 0.1.0
+
+- initial Twitch support
+- streamer cards
