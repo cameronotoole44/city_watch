@@ -70,6 +70,7 @@ export async function getLiveStreams(
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
     }
+
     const channelMap = new Map<string, KickV2Channel>();
     results.forEach((channel) => {
       if (channel) {

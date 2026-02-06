@@ -116,3 +116,23 @@ export async function getStreams(): Promise<StreamStatus[]> {
     throw error;
   }
 }
+// cloudflare
+export async function onRequest(context: { env: Record<string, string> }) {
+  (globalThis as any).CF_ENV = context.env;
+
+  try {
+    const streams = await getStreams();
+    return new Response(JSON.stringify(streams), {
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+  } catch (error) {
+    console.error("API error:", error);
+    return new Response(JSON.stringify({ error: "Failed to fetch streams" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+}
