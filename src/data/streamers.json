@@ -12,6 +12,12 @@
     "character": "bobby charles"
   },
   {
+    "name": "4hbunger",
+    "twitchUsername": "4hbunger",
+    "kickUsername": "",
+    "character": "frederick 'fregg' white"
+  },
+  {
     "name": "4head",
     "twitchUsername": "4head",
     "kickUsername": "4head",
@@ -40,7 +46,7 @@
     "twitchUsername": "aheeyuh",
     "kickUsername": "",
     "character": "normie reece"
-  },  
+  },
   {
     "name": "airborne",
     "twitchUsername": "airborne",
@@ -88,7 +94,7 @@
     "twitchUsername": "ashi",
     "kickUsername": "ashi",
     "character": "fiona stewart"
-  },  
+  },
   {
     "name": "ashlynn",
     "twitchUsername": "ashlynn",
@@ -124,7 +130,13 @@
     "twitchUsername": "baffty",
     "kickUsername": "",
     "character": "matthew colby"
-  },  
+  },
+  {
+    "name": "bananahead_og",
+    "twitchUsername": "bananahead_og",
+    "kickUsername": "",
+    "character": "nana banana"
+  },
   {
     "name": "bazzagazza",
     "twitchUsername": "bazzagaza",
@@ -142,6 +154,12 @@
     "twitchUsername": "blau",
     "kickUsername": "",
     "character": "mickey sinclaire"
+  },
+  {
+    "name": "bluebonnetrp",
+    "twitchUsername": "bluebonnetrp",
+    "kickUsername": "",
+    "character": "judas 'jt' thompson"
   },
   {
     "name": "brookeab",
@@ -204,6 +222,18 @@
     "character": "jagger 'chatterbox' gerardy"
   },
   {
+    "name": "chickenkeev",
+    "twitchUsername": "chickenkeev",
+    "kickUsername": "",
+    "character": "frank skinner"
+  },
+  {
+    "name": "chidori_senpai",
+    "twitchUsername": "chidori_senpai",
+    "kickUsername": "",
+    "character": "catherina 'cat' gonzalez"
+  },
+  {
     "name": "chillypanda",
     "twitchUsername": "chillypanda",
     "kickUsername": "chillypanda",
@@ -258,6 +288,12 @@
     "character": "lorenzo lezar"
   },
   {
+    "name": "cydrose",
+    "twitchUsername": "cydrose",
+    "kickUsername": "",
+    "character": "maeve wolf"
+  },
+  {
     "name": "dasmehdi",
     "twitchUsername": "dasmehdi",
     "kickUsername": "dasmehdi",
@@ -268,7 +304,8 @@
     "twitchUsername": "daveybe",
     "kickUsername": "",
     "character": "pip deleham"
-  },                       {
+  },
+  {
     "name": "deansocool",
     "twitchUsername": "deansocool",
     "kickUsername": "deansocool",
@@ -309,7 +346,7 @@
     "twitchUsername": "elfalliiee",
     "kickUsername": "",
     "character": "autumn perry"
-  },           
+  },
   {
     "name": "enevun",
     "twitchUsername": "enevun",
@@ -323,17 +360,23 @@
     "character": "cletus cornwood"
   },
   {
+    "name": "fahrenheit",
+    "twitchUsername": "fahrenheit",
+    "kickUsername": "fahrenheit",
+    "character": "ilya karishnikov"
+  },
+  {
     "name": "favorite",
     "twitchUsername": "favorite",
     "kickUsername": "",
     "character": "evelyn thompson"
-  },  
+  },
   {
     "name": "firecrackthat",
     "twitchUsername": "firecrackthat",
     "kickUsername": "",
     "character": "stumbles fumbles"
-  },  
+  },
   {
     "name": "fuslie",
     "twitchUsername": "fuslie",
@@ -365,8 +408,8 @@
     "character": "stanley 'stagdancer' lessfield"
   },
   {
-    "name": "gingersnap",
-    "twitchUsername": "gingersnap",
+    "name": "gingersnap_",
+    "twitchUsername": "gingersnap_",
     "kickUsername": "",
     "character": "sophie sanders"
   },
@@ -431,6 +474,12 @@
     "character": "kitty stenberg-dream"
   },
   {
+    "name": "itsholmes",
+    "twitchUsername": "itsholmes",
+    "kickUsername": "",
+    "character": "andre tyson"
+  },
+  {
     "name": "itsjustasummerjob",
     "twitchUsername": "itsjustasummerjob",
     "kickUsername": "itsjustasummerjob",
@@ -467,6 +516,12 @@
     "character": "denzel williams"
   },
   {
+    "name": "justrebexa",
+    "twitchUsername": "justrebexa",
+    "kickUsername": "",
+    "character": "violet waters"
+  },
+  {
     "name": "kaelea",
     "twitchUsername": "kaelea",
     "kickUsername": "",
@@ -483,6 +538,12 @@
     "twitchUsername": "kemony",
     "kickUsername": "kemony",
     "character": "susie carmichael"
+  },
+  {
+    "name": "kingjayclouted",
+    "twitchUsername": "kingjayclouted",
+    "kickUsername": "",
+    "character": "gregory johnson"
   },
   {
     "name": "kittenqg",
@@ -581,6 +642,12 @@
     "character": "pixie tarantino"
   },
   {
+    "name": "malcolmglass",
+    "twitchUsername": "malcolmglass",
+    "kickUsername": "",
+    "character": "malcolm nekoda"
+  },
+  {
     "name": "margothesnail",
     "twitchUsername": "margothesnail",
     "kickUsername": "margothesnail",
@@ -609,12 +676,18 @@
     "twitchUsername": "melodymaeee",
     "kickUsername": "",
     "character": "jasmine winters"
-  },  
+  },
   {
     "name": "mfwarlock",
     "twitchUsername": "mfwarlock",
     "kickUsername": "mfwarlock",
     "character": "skipper jones"
+  },
+  {
+    "name": "mick",
+    "twitchUsername": "mick",
+    "kickUsername": "",
+    "character": "gladys berry"
   },
   {
     "name": "middleditch",
@@ -657,7 +730,7 @@
     "twitchUsername": "mungo",
     "kickUsername": "",
     "character": "bobby 'bonbon' beldrum"
-  },  
+  },
   {
     "name": "nakkida",
     "twitchUsername": "nakkida",
@@ -731,6 +804,12 @@
     "character": "raymond romanov"
   },
   {
+    "name": "revive",
+    "twitchUsername": "revive",
+    "kickUsername": "",
+    "character": "klevin 'k-murda' powers"
+  },
+  {
     "name": "revroach",
     "twitchUsername": "revroach",
     "kickUsername": "revroach",
@@ -743,6 +822,12 @@
     "character": "larry knox"
   },
   {
+    "name": "rissabear",
+    "twitchUsername": "rissabear",
+    "kickUsername": "",
+    "character": "rissa berry"
+  },
+  {
     "name": "rlly",
     "twitchUsername": "rlly",
     "kickUsername": "",
@@ -753,6 +838,12 @@
     "twitchUsername": "roflgator",
     "kickUsername": "",
     "character": "robert spowylamywanowski"
+  },
+  {
+    "name": "rossthehsauce",
+    "twitchUsername": "rossthehsauce",
+    "kickUsername": "",
+    "character": "murrietta 'guppy' arlington"
   },
   {
     "name": "roxmiral",
@@ -771,6 +862,12 @@
     "twitchUsername": "saiiren",
     "kickUsername": "",
     "character": "ai musori"
+  },
+  {
+    "name": "samoatss",
+    "twitchUsername": "samoatss",
+    "kickUsername": "",
+    "character": "marcus wade"
   },
   {
     "name": "sannmann",
@@ -807,7 +904,7 @@
     "twitchUsername": "shadiko",
     "kickUsername": "shadiko",
     "character": "alex mushkin-domino"
-  },  
+  },
   {
     "name": "silent",
     "twitchUsername": "silent",
@@ -827,7 +924,7 @@
     "character": "roger thyne"
   },
   {
-    "name": "spacyboy",
+    "name": "spaceboy",
     "twitchUsername": "spaceboy",
     "kickUsername": "",
     "character": "james allison randal"
@@ -861,6 +958,12 @@
     "twitchUsername": "the_wizurd_",
     "kickUsername": "",
     "character": "chestanisberg andersonbergenson"
+  },
+  {
+    "name": "theeazylife",
+    "twitchUsername": "theeazylife",
+    "kickUsername": "",
+    "character": "brandon valentino"
   },
   {
     "name": "tinystunt",
@@ -971,6 +1074,12 @@
     "character": "james marco st. marco"
   },
   {
+    "name": "workszy",
+    "twitchUsername": "workszy",
+    "kickUsername": "",
+    "character": "william pepe"
+  },
+  {
     "name": "xiceman",
     "twitchUsername": "xiceman",
     "kickUsername": "xiceman",
@@ -1023,5 +1132,5 @@
     "twitchUsername": "zshavair02",
     "kickUsername": "",
     "character": "imo 'rat king' malum"
-  }  
+  }
 ]
