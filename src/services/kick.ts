@@ -32,6 +32,7 @@ async function getChannelInfo(slug: string): Promise<KickV2Channel | null> {
     });
 
     if (!response.ok) {
+      await response.text();
       console.error(
         `[Kick] failed to fetch channel ${slug}: ${response.status}`,
       );
@@ -70,7 +71,6 @@ export async function getLiveStreams(
         await new Promise((resolve) => setTimeout(resolve, 100));
       }
     }
-
     const channelMap = new Map<string, KickV2Channel>();
     results.forEach((channel) => {
       if (channel) {
