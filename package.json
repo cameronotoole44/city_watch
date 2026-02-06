@@ -1,10 +1,11 @@
 {
   "name": "city_watch",
-  "version": "0.1.0",
-  "description": "NoPixel stream aggregator",
+  "version": "0.2.0",
+  "description": "nopixel rp stream aggregator",
   "scripts": {
     "dev": "bun run server.ts",
-    "start": "bun run server.ts"
+    "start": "bun run server.ts",
+    "sync": "bun run scripts/sync-streamers.ts"
   },
   "dependencies": {
     "dotenv": "^16.3.1"
