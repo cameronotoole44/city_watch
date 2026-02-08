@@ -13,7 +13,15 @@
   <body>
     <h1>city_watch</h1>
     <p class="subtitle"></p>
-    
+    <div class="search-container">
+      <input 
+        type="text" 
+        id="search-input" 
+        class="search-input" 
+        placeholder="search character or streamer"
+        oninput="handleSearch()"
+      />
+    </div>    
     <div id="app">
       <div class="loading">loading streams...</div>
     </div>
@@ -77,6 +85,60 @@
   function getOfflineCollapsed() {
     const stored = localStorage.getItem('offlineCollapsed');
     return stored === null ? true : stored === 'true';
+  }
+
+  function handleSearch() {
+    const query = document.getElementById('search-input').value.toLowerCase().trim();
+    renderStreams(query);
+  }
+
+  function renderStreams(query = '') {
+    const app = document.getElementById('app');
+    const streams = window.currentStreams;
+
+    if (!streams) return;
+
+    const filtered = streams.filter(stream => {
+      if (!query) return true;
+      const nameMatch = stream.name.toLowerCase().includes(query);
+      const characterMatch = stream.characters?.some(c => c.toLowerCase().includes(query));
+      return nameMatch || characterMatch;
+    });
+
+    const live = filtered.filter(s => s.isLive);
+    const offline = filtered.filter(s => !s.isLive);
+    const isCollapsed = getOfflineCollapsed();
+
+    let html = '';
+
+    html += '<h2 class="section-title">live now</h2>';
+    if (live.length > 0) {
+      html += '<div class="streams-live">';
+      html += live.map(renderLiveCard).join('');
+      html += '</div>';
+    } else if (query) {
+      html += '<div class="empty-state"><p>no live streams match "' + query + '"</p></div>';
+    } else {
+      html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is live?</p></div>';
+    }
+
+    if (offline.length > 0) {
+      html += `
+        <div class="offline-header">
+          <h2 class="section-title">offline (${offline.length})</h2>
+          <button id="offline-toggle" class="offline-toggle" onclick="toggleOffline()">
+            ${isCollapsed ? '+' : '−'}
+          </button>
+        </div>
+        <div id="offline-container" class="streams-offline ${isCollapsed ? 'collapsed' : ''}">
+          ${offline.map(renderOfflineCard).join('')}
+        </div>
+      `;
+    } else if (query && streams.filter(s => !s.isLive).length > 0) {
+      html += '<div class="empty-state"><p>no offline streams match "' + query + '"</p></div>';
+    }
+
+    app.innerHTML = html;
   }
 
   function renderLiveCard(stream) {
@@ -180,37 +242,9 @@
       }
 
       window.currentStreams = streams;
-
-      const live = streams.filter(s => s.isLive);
-      const offline = streams.filter(s => !s.isLive);
-      const isCollapsed = getOfflineCollapsed();
-
-      let html = '';
-
-      html += '<h2 class="section-title">live now</h2>';
-      if (live.length > 0) {
-        html += '<div class="streams-live">';
-        html += live.map(renderLiveCard).join('');
-        html += '</div>';
-      } else {
-        html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is live?</p></div>';
-      }
-
-      if (offline.length > 0) {
-        html += `
-          <div class="offline-header">
-            <h2 class="section-title">offline (${offline.length})</h2>
-            <button id="offline-toggle" class="offline-toggle" onclick="toggleOffline()">
-              ${isCollapsed ? '+' : '−'}
-            </button>
-          </div>
-          <div id="offline-container" class="streams-offline ${isCollapsed ? 'collapsed' : ''}">
-            ${offline.map(renderOfflineCard).join('')}
-          </div>
-        `;
-      }
-
-      app.innerHTML = html;
+      
+      const query = document.getElementById('search-input')?.value.toLowerCase().trim() || '';
+      renderStreams(query);
     } catch (error) {
       app.innerHTML = `<div class="error">failed to load streams: ${error.message}</div>`;
     }
