@@ -16,7 +16,8 @@ _\*whitelisted players_
 
 ### **Features**
 
-- see who is live on Twitch and/or Kick
+- see who is live on Twitch / Kick
+- search for character / streamer
 - uptime
 - viewer count
 - character name
@@ -26,17 +27,23 @@ _\*whitelisted players_
 
 ---
 
-## ![city_watch screenshot](/public/assets/v0.2.0-ui.png)
+## ![city_watch screenshot](/public/assets/v0.3.0-ui.png)
 
 ## Changelog
 
-### 0.2.0
+### v0.3.0
+
+- support for multiple characters per streamer
+- collapsible offline channels section
+- search bar added
+
+### v0.2.0
 
 - Kick integration
 - dual streaming support
 - caching
 
-### 0.1.0
+### v0.1.0
 
 - initial Twitch support
 - streamer cards
