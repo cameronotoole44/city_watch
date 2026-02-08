@@ -124,7 +124,7 @@
                 }
               </div>              
               <div class="streamer-name">${stream.name}</div>
-              ${stream.character ? `<div class="character-name">${stream.character}</div>` : ''}
+              ${stream.characters?.length ? `<div class="character-name">${stream.characters.join(', ')}</div>` : ''}
               
               <div class="stream-details">
                 <span class="stream-title">${displayData.title || ''}</span>
@@ -143,7 +143,7 @@
             <div class="offline-content">
               <div class="offline-info">
                 <div class="streamer-name">${stream.name}</div>
-                ${stream.character ? `<div class="character-name">${stream.character}</div>` : ''}
+                ${stream.characters ? `<div class="character-name">${stream.characters}</div>` : ''}
               </div>
               <span class="offline-status">Offline</span>
             </div>

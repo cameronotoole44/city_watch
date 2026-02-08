@@ -7,7 +7,7 @@ interface Streamer {
   name: string;
   twitchUsername: string;
   kickUsername: string;
-  character: string;
+  characters?: string[];
 }
 
 async function confirm(question: string): Promise<boolean> {
@@ -82,9 +82,9 @@ async function main() {
     );
     removedUsernames.forEach((u) => {
       const streamer = existingMap.get(u);
-      const hasData = streamer?.character && streamer.character.length > 0;
+      const hasData = streamer?.characters && streamer.characters.length > 0;
       console.log(
-        `   - ${u}${hasData ? ` (has character: "${streamer?.character}")` : ""}`,
+        `   - ${u}${hasData ? ` (has character: "${streamer?.characters}")` : ""}`,
       );
     });
   }
@@ -101,7 +101,7 @@ async function main() {
       name: username,
       twitchUsername: username,
       kickUsername: username,
-      character: "",
+      characters: [],
     };
   });
 

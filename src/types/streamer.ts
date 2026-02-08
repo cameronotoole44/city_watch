@@ -2,7 +2,7 @@ export interface Streamer {
   name: string;
   twitchUsername?: string;
   kickUsername?: string;
-  character?: string;
+  characters?: string[];
 }
 export interface PlatformStatus {
   isLive: boolean;
