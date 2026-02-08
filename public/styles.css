@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 :root {
   --nopixel-accent: #00F8B9;
   --nopixel-dark: #1B1844;
@@ -17,7 +18,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'JetBrains Mono', monospace, system-ui, -apple-system, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   padding: 2rem;
@@ -283,4 +284,43 @@ h1 {
   color: var(--text-secondary);
   font-size: 0.9rem;
   padding: 1rem 0;
+}
+
+/* OFFLINE COLLAPSIBLE */
+.offline-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.offline-header .section-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.offline-toggle {
+  background: var(--bg-card);
+  border: 1px solid #2a2a2d;
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.offline-toggle:hover {
+  background: #2a2a2d;
+  color: var(--text-primary);
+}
+
+.streams-offline.collapsed {
+  display: none;
 }

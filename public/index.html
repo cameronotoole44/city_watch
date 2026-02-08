@@ -18,180 +18,207 @@
       <div class="loading">loading streams...</div>
     </div>
 
-    <script>
-      const platformSelections = {};
+<script>
+  const platformSelections = {};
 
-      function formatDuration(startedAt) {
-        const start = new Date(startedAt);
-        const now = new Date();
-        const diff = Math.floor((now - start) / 1000);
-        const hours = Math.floor(diff / 3600);
-        const minutes = Math.floor((diff % 3600) / 60);
-        
-        if (hours > 0) {
-          return `${hours}h ${minutes}m`;
-        }
-        return `${minutes}m`;
+  function formatDuration(startedAt) {
+    const start = new Date(startedAt);
+    const now = new Date();
+    const diff = Math.floor((now - start) / 1000);
+    const hours = Math.floor(diff / 3600);
+    const minutes = Math.floor((diff % 3600) / 60);
+    
+    if (hours > 0) {
+      return `${hours}h ${minutes}m`;
+    }
+    return `${minutes}m`;
+  }
+
+  function formatViewers(count) {
+    if (count >= 1000) {
+      return (count / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    return count.toString();
+  }
+
+  function getThumbnailUrl(url, width = 320, height = 180) {
+    if (!url) return '';
+    return url.replace('{width}', width).replace('{height}', height);
+  }
+
+  function getStreamUrl(stream, platform) {
+    if (platform === 'kick') {
+      return `https://kick.com/${stream.kickUsername}`;
+    }
+    return `https://twitch.tv/${stream.twitchUsername}`;
+  }
+
+  function togglePlatform(streamName, newPlatform) {
+    platformSelections[streamName] = newPlatform;
+    const card = document.querySelector(`[data-streamer="${streamName}"]`);
+    if (card) {
+      const stream = window.currentStreams.find(s => s.name === streamName);
+      if (stream) {
+        const newCard = document.createElement('div');
+        newCard.innerHTML = renderLiveCard(stream);
+        card.replaceWith(newCard.firstElementChild);
       }
-      function formatViewers(count) {
-        if (count >= 1000) {
-          return (count / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
-        }
-        return count.toString();
+    }
+  }
+
+  function toggleOffline() {
+    const container = document.getElementById('offline-container');
+    const toggle = document.getElementById('offline-toggle');
+    const isCollapsed = container.classList.toggle('collapsed');
+    toggle.textContent = isCollapsed ? '+' : '−';
+    localStorage.setItem('offlineCollapsed', isCollapsed);
+  }
+
+  function getOfflineCollapsed() {
+    const stored = localStorage.getItem('offlineCollapsed');
+    return stored === null ? true : stored === 'true';
+  }
+
+  function renderLiveCard(stream) {
+    const isDual = stream.platform === 'both';
+
+    let activePlatform;
+    if (isDual) {
+      activePlatform = platformSelections[stream.name] || 'kick';
+    } else {
+      activePlatform = stream.platform || 'twitch';
+    }
+
+    let displayData;
+    if (isDual) {
+      displayData = activePlatform === 'kick' ? stream.kick : stream.twitch;
+    } else {
+      displayData = {
+        title: stream.title,
+        viewerCount: stream.viewerCount,
+        thumbnailUrl: stream.thumbnailUrl,
+        startedAt: stream.startedAt,
+      };
+    }
+
+    const hasThumbnail = displayData.thumbnailUrl && displayData.thumbnailUrl.length > 0;
+
+    let badgesHtml;
+    if (isDual) {
+      const twitchActive = activePlatform === 'twitch';
+      const kickActive = activePlatform === 'kick';
+      badgesHtml = `
+        <div class="platform-badges">
+          <button class="platform-badge twitch ${twitchActive ? 'active' : 'inactive'}" 
+                  onclick="event.preventDefault(); event.stopPropagation(); togglePlatform('${stream.name}', 'twitch')">
+            twitch
+          </button>
+          <button class="platform-badge kick ${kickActive ? 'active' : 'inactive'}"
+                  onclick="event.preventDefault(); event.stopPropagation(); togglePlatform('${stream.name}', 'kick')">
+            kick
+          </button>
+        </div>
+      `;
+    } else {
+      badgesHtml = `<span class="platform-badge ${activePlatform}">${activePlatform}</span>`;
+    }
+
+    return `
+      <div class="stream-card live ${activePlatform}" data-streamer="${stream.name}">
+        <a href="${getStreamUrl(stream, activePlatform)}" target="_blank" rel="noopener">
+          <div class="card-header">
+            ${badgesHtml}
+            <span class="viewer-count">
+              <span>👁</span>
+              <span>${formatViewers(displayData.viewerCount)}</span>
+            </span>
+          </div>              
+          <div class="thumbnail-container">
+            ${hasThumbnail 
+              ? `<img class="thumbnail" src="${getThumbnailUrl(displayData.thumbnailUrl)}" alt="${stream.name}" loading="lazy" />`
+              : `<div class="thumbnail-placeholder"><span>LIVE</span></div>`
+            }
+          </div>              
+          <div class="streamer-name">${stream.name}</div>
+          ${stream.characters?.length ? `<div class="character-name">${stream.characters.join(', ')}</div>` : ''}
+          
+          <div class="stream-details">
+            <span class="stream-title">${displayData.title || ''}</span>
+            <span class="stream-time">
+              ${formatDuration(displayData.startedAt)}
+              <span class="live-dot"></span>
+            </span>
+          </div>
+        </a>
+      </div>
+    `;
+  }
+
+  function renderOfflineCard(stream) {
+    return `
+      <div class="stream-card offline">
+        <div class="offline-content">
+          <div class="offline-info">
+            <div class="streamer-name">${stream.name}</div>
+            ${stream.characters?.length ? `<div class="character-name">${stream.characters.join(', ')}</div>` : ''}
+          </div>
+          <span class="offline-status">Offline</span>
+        </div>
+      </div>
+    `;
+  }
+
+  async function fetchStreams() {
+    const app = document.getElementById("app");
+
+    try {
+      const response = await fetch("/api/streams");
+      const streams = await response.json();
+
+      if (streams.error) {
+        throw new Error(streams.error);
       }
-      function getThumbnailUrl(url, width = 320, height = 180) {
-        if (!url) return '';
-        return url.replace('{width}', width).replace('{height}', height);
+
+      window.currentStreams = streams;
+
+      const live = streams.filter(s => s.isLive);
+      const offline = streams.filter(s => !s.isLive);
+      const isCollapsed = getOfflineCollapsed();
+
+      let html = '';
+
+      html += '<h2 class="section-title">live now</h2>';
+      if (live.length > 0) {
+        html += '<div class="streams-live">';
+        html += live.map(renderLiveCard).join('');
+        html += '</div>';
+      } else {
+        html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is live?</p></div>';
       }
 
-      function getStreamUrl(stream, platform) {
-        if (platform === 'kick') {
-          return `https://kick.com/${stream.kickUsername}`;
-        }
-        return `https://twitch.tv/${stream.twitchUsername}`;
-      }
-
-      function togglePlatform(streamName, newPlatform) {
-        platformSelections[streamName] = newPlatform;
-        const card = document.querySelector(`[data-streamer="${streamName}"]`);
-        if (card) {
-          const stream = window.currentStreams.find(s => s.name === streamName);
-          if (stream) {
-            const newCard = document.createElement('div');
-            newCard.innerHTML = renderLiveCard(stream);
-            card.replaceWith(newCard.firstElementChild);
-          }
-        }
-      }
-
-      function renderLiveCard(stream) {
-        const isDual = stream.platform === 'both';
-
-        let activePlatform;
-        if (isDual) {
-          activePlatform = platformSelections[stream.name] || 'kick';
-        } else {
-          activePlatform = stream.platform || 'twitch';
-        }
-        let displayData;
-        if (isDual) {
-          displayData = activePlatform === 'kick' ? stream.kick : stream.twitch;
-        } else {
-          displayData = {
-            title: stream.title,
-            viewerCount: stream.viewerCount,
-            thumbnailUrl: stream.thumbnailUrl,
-            startedAt: stream.startedAt,
-          };
-        }
-
-        const hasThumbnail = displayData.thumbnailUrl && displayData.thumbnailUrl.length > 0;
-
-        let badgesHtml;
-        if (isDual) {
-          const twitchActive = activePlatform === 'twitch';
-          const kickActive = activePlatform === 'kick';
-          badgesHtml = `
-            <div class="platform-badges">
-              <button class="platform-badge twitch ${twitchActive ? 'active' : 'inactive'}" 
-                      onclick="event.preventDefault(); event.stopPropagation(); togglePlatform('${stream.name}', 'twitch')">
-                twitch
-              </button>
-              <button class="platform-badge kick ${kickActive ? 'active' : 'inactive'}"
-                      onclick="event.preventDefault(); event.stopPropagation(); togglePlatform('${stream.name}', 'kick')">
-                kick
-              </button>
-            </div>
-          `;
-        } else {
-          badgesHtml = `<span class="platform-badge ${activePlatform}">${activePlatform}</span>`;
-        }
-
-        return `
-          <div class="stream-card live ${activePlatform}" data-streamer="${stream.name}">
-            <a href="${getStreamUrl(stream, activePlatform)}" target="_blank" rel="noopener">
-              <div class="card-header">
-                ${badgesHtml}
-                <span class="viewer-count">
-                  <span>👁</span>
-                  <span>${formatViewers(displayData.viewerCount)}</span>
-                </span>
-              </div>              
-              <div class="thumbnail-container">
-                ${hasThumbnail 
-                  ? `<img class="thumbnail" src="${getThumbnailUrl(displayData.thumbnailUrl)}" alt="${stream.name}" loading="lazy" />`
-                  : `<div class="thumbnail-placeholder"><span>LIVE</span></div>`
-                }
-              </div>              
-              <div class="streamer-name">${stream.name}</div>
-              ${stream.characters?.length ? `<div class="character-name">${stream.characters.join(', ')}</div>` : ''}
-              
-              <div class="stream-details">
-                <span class="stream-title">${displayData.title || ''}</span>
-                <span class="stream-time">
-                  ${formatDuration(displayData.startedAt)}
-                  <span class="live-dot"></span>
-                </span>
-              </div>
-            </a>
+      if (offline.length > 0) {
+        html += `
+          <div class="offline-header">
+            <h2 class="section-title">offline (${offline.length})</h2>
+            <button id="offline-toggle" class="offline-toggle" onclick="toggleOffline()">
+              ${isCollapsed ? '+' : '−'}
+            </button>
+          </div>
+          <div id="offline-container" class="streams-offline ${isCollapsed ? 'collapsed' : ''}">
+            ${offline.map(renderOfflineCard).join('')}
           </div>
         `;
       }
-      function renderOfflineCard(stream) {
-        return `
-          <div class="stream-card offline">
-            <div class="offline-content">
-              <div class="offline-info">
-                <div class="streamer-name">${stream.name}</div>
-                ${stream.characters ? `<div class="character-name">${stream.characters}</div>` : ''}
-              </div>
-              <span class="offline-status">Offline</span>
-            </div>
-          </div>
-        `;
-      }
 
-      async function fetchStreams() {
-        const app = document.getElementById("app");
+      app.innerHTML = html;
+    } catch (error) {
+      app.innerHTML = `<div class="error">failed to load streams: ${error.message}</div>`;
+    }
+  }
 
-        try {
-          const response = await fetch("/api/streams");
-          const streams = await response.json();
-
-          if (streams.error) {
-            throw new Error(streams.error);
-          }
-
-          window.currentStreams = streams;
-
-          const live = streams.filter(s => s.isLive);
-          const offline = streams.filter(s => !s.isLive);
-
-          let html = '';
-
-          html += '<h2 class="section-title">live now</h2>';
-          if (live.length > 0) {
-            html += '<div class="streams-live">';
-            html += live.map(renderLiveCard).join('');
-            html += '</div>';
-          } else {
-            html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is live?</p></div>';
-          }
-          if (offline.length > 0) {
-            html += '<h2 class="section-title">offline</h2>';
-            html += '<div class="streams-offline">';
-            html += offline.map(renderOfflineCard).join('');
-            html += '</div>';
-          }
-          app.innerHTML = html;
-        } catch (error) {
-          app.innerHTML = `<div class="error">failed to load streams: ${error.message}</div>`;
-        }
-      }
-
-      fetchStreams();
-      // 5 minutes
-      setInterval(fetchStreams, 300000);
-    </script>
+  fetchStreams();
+  // 5 minutes
+  setInterval(fetchStreams, 300000);
+</script>
   </body>
 </html>
