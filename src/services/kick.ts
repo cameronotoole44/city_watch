@@ -16,6 +16,11 @@ interface KickV2Channel {
     thumbnail: {
       url: string;
     };
+    categories: Array<{
+      id: number;
+      name: string;
+      slug: string;
+    }>;
   } | null;
   user: {
     username: string;
@@ -83,10 +88,10 @@ export async function getLiveStreams(
     return streamers.map((streamer) => {
       const kickUsername = streamer.kickUsername?.toLowerCase();
       const channel = kickUsername ? channelMap.get(kickUsername) : undefined;
-
       if (channel?.livestream?.is_live) {
+        const category = channel.livestream.categories?.[0]?.name || undefined;
         console.log(
-          `[Kick] ${streamer.name} is LIVE with ${channel.livestream.viewer_count} viewers`,
+          `[Kick] ${streamer.name} is LIVE - category: "${category}"`,
         );
         return {
           ...streamer,
@@ -96,6 +101,7 @@ export async function getLiveStreams(
           viewerCount: channel.livestream.viewer_count,
           thumbnailUrl: undefined,
           startedAt: channel.livestream.created_at,
+          category,
         };
       }
       return {
