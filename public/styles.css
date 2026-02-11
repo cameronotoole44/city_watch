@@ -352,6 +352,55 @@ h1 {
   color: var(--text-primary);
 }
 
+
+/* INCITY/OUTOFCITY */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.section-header .section-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.section-toggle {
+  background: var(--bg-card);
+  border: 1px solid #2a2a2d;
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.section-toggle:hover {
+  background: #2a2a2d;
+  color: var(--text-primary);
+}
+
+.streams-live.collapsed,
 .streams-offline.collapsed {
   display: none;
+}
+
+/* CATEGORY TAG */
+.category-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  background: #2a2a2d;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
