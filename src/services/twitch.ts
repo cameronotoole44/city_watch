@@ -13,6 +13,7 @@ interface TwitchStream {
   viewer_count: number;
   started_at: string;
   thumbnail_url: string;
+  game_name: string;
 }
 
 interface TwitchStreamsResponse {
@@ -123,6 +124,7 @@ export async function getLiveStreams(
         viewerCount: liveStream.viewer_count,
         thumbnailUrl: liveStream.thumbnail_url,
         startedAt: liveStream.started_at,
+        category: liveStream.game_name,
       };
     }
 
