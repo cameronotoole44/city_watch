@@ -28,6 +28,20 @@
 
 <script>
   const platformSelections = {};
+const GTA_CATEGORIES = [
+  "Grand Theft Auto V",
+  "Grand Theft Auto V (GTA)",
+  "No Pixel RP (GTA)",
+];
+
+function isInCity(stream) {
+  if (stream.platform === 'both') {
+    const activePlatform = platformSelections[stream.name] || 'kick';
+    const platformData = activePlatform === 'kick' ? stream.kick : stream.twitch;
+    return GTA_CATEGORIES.includes(platformData?.category);
+  }
+  return GTA_CATEGORIES.includes(stream.category);
+}
 
   function formatDuration(startedAt) {
     const start = new Date(startedAt);
@@ -63,27 +77,20 @@
 
   function togglePlatform(streamName, newPlatform) {
     platformSelections[streamName] = newPlatform;
-    const card = document.querySelector(`[data-streamer="${streamName}"]`);
-    if (card) {
-      const stream = window.currentStreams.find(s => s.name === streamName);
-      if (stream) {
-        const newCard = document.createElement('div');
-        newCard.innerHTML = renderLiveCard(stream);
-        card.replaceWith(newCard.firstElementChild);
-      }
-    }
+    const query = document.getElementById('search-input')?.value.toLowerCase().trim() || '';
+    renderStreams(query);
   }
 
-  function toggleOffline() {
-    const container = document.getElementById('offline-container');
-    const toggle = document.getElementById('offline-toggle');
+  function toggleSection(sectionId) {
+    const container = document.getElementById(`${sectionId}-container`);
+    const toggle = document.getElementById(`${sectionId}-toggle`);
     const isCollapsed = container.classList.toggle('collapsed');
     toggle.textContent = isCollapsed ? '+' : '−';
-    localStorage.setItem('offlineCollapsed', isCollapsed);
+    localStorage.setItem(`${sectionId}Collapsed`, isCollapsed);
   }
 
-  function getOfflineCollapsed() {
-    const stored = localStorage.getItem('offlineCollapsed');
+  function getSectionCollapsed(sectionId) {
+    const stored = localStorage.getItem(`${sectionId}Collapsed`);
     return stored === null ? true : stored === 'true';
   }
 
@@ -105,32 +112,52 @@
       return nameMatch || characterMatch;
     });
 
-    const live = filtered.filter(s => s.isLive);
+    const inCity = filtered.filter(s => s.isLive && isInCity(s));
+    const notInCity = filtered.filter(s => s.isLive && !isInCity(s));
     const offline = filtered.filter(s => !s.isLive);
-    const isCollapsed = getOfflineCollapsed();
+    
+    const notInCityCollapsed = getSectionCollapsed('notInCity');
+    const offlineCollapsed = getSectionCollapsed('offline');
 
     let html = '';
 
-    html += '<h2 class="section-title">live now</h2>';
-    if (live.length > 0) {
+    // IN CITY
+    html += '<h2 class="section-title">in city</h2>';
+    if (inCity.length > 0) {
       html += '<div class="streams-live">';
-      html += live.map(renderLiveCard).join('');
+      html += inCity.map(renderLiveCard).join('');
       html += '</div>';
     } else if (query) {
-      html += '<div class="empty-state"><p>no live streams match "' + query + '"</p></div>';
+      html += '<div class="empty-state"><p>no streams match "' + query + '"</p></div>';
     } else {
-      html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is live?</p></div>';
+      html += '<div class="empty-state"><img src="/assets/pepe-hands.png" alt="" /><p>no one is in the city</p></div>';
     }
 
-    if (offline.length > 0) {
+    // NOT IN CITY
+    if (notInCity.length > 0) {
       html += `
-        <div class="offline-header">
-          <h2 class="section-title">offline (${offline.length})</h2>
-          <button id="offline-toggle" class="offline-toggle" onclick="toggleOffline()">
-            ${isCollapsed ? '+' : '−'}
+        <div class="section-header">
+          <h2 class="section-title">not in city (${notInCity.length})</h2>
+          <button id="notInCity-toggle" class="section-toggle" onclick="toggleSection('notInCity')">
+            ${notInCityCollapsed ? '+' : '−'}
           </button>
         </div>
-        <div id="offline-container" class="streams-offline ${isCollapsed ? 'collapsed' : ''}">
+        <div id="notInCity-container" class="streams-live ${notInCityCollapsed ? 'collapsed' : ''}">
+          ${notInCity.map(renderLiveCard).join('')}
+        </div>
+      `;
+    }
+
+    // OFFLINE
+    if (offline.length > 0) {
+      html += `
+        <div class="section-header">
+          <h2 class="section-title">offline (${offline.length})</h2>
+          <button id="offline-toggle" class="section-toggle" onclick="toggleSection('offline')">
+            ${offlineCollapsed ? '+' : '−'}
+          </button>
+        </div>
+        <div id="offline-container" class="streams-offline ${offlineCollapsed ? 'collapsed' : ''}">
           ${offline.map(renderOfflineCard).join('')}
         </div>
       `;
@@ -160,10 +187,14 @@
         viewerCount: stream.viewerCount,
         thumbnailUrl: stream.thumbnailUrl,
         startedAt: stream.startedAt,
+        category: stream.category,
       };
     }
 
     const hasThumbnail = displayData.thumbnailUrl && displayData.thumbnailUrl.length > 0;
+    const categoryDisplay = displayData.category && !GTA_CATEGORIES.includes(displayData.category)
+  ? `<span class="category-tag">${displayData.category}</span>` 
+  : '';
 
     let badgesHtml;
     if (isDual) {
@@ -203,6 +234,7 @@
           </div>              
           <div class="streamer-name">${stream.name}</div>
           ${stream.characters?.length ? `<div class="character-name">${stream.characters.join(', ')}</div>` : ''}
+          ${categoryDisplay}
           
           <div class="stream-details">
             <span class="stream-title">${displayData.title || ''}</span>
