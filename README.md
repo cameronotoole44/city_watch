@@ -27,23 +27,29 @@ _\*whitelisted players_
 
 ---
 
-## ![city_watch screenshot](/public/assets/v0.3.0-ui.png)
+## ![city_watch screenshot](/public/assets/v0.4.0-ui.png)
 
 ## Changelog
 
-### v0.3.0
+### 0.4.0
+
+- category filtering for GTA V streams
+- "not in city" section for live non-GTA streams
+- collapsable sections with localStorage preference
+
+### 0.3.0
 
 - support for multiple characters per streamer
 - collapsible offline channels section
 - search bar added
 
-### v0.2.0
+### 0.2.0
 
 - Kick integration
 - dual streaming support
 - caching
 
-### v0.1.0
+### 0.1.0
 
 - initial Twitch support
 - streamer cards
