@@ -35,12 +35,17 @@ async function fetchFreshData(): Promise<StreamStatus[]> {
         ),
         thumbnailUrl: twitchStatus!.thumbnailUrl,
         startedAt: twitchStatus!.startedAt,
+        category:
+          (kickStatus!.viewerCount || 0) >= (twitchStatus!.viewerCount || 0)
+            ? kickStatus!.category
+            : twitchStatus!.category,
         twitch: {
           isLive: true,
           title: twitchStatus!.title,
           viewerCount: twitchStatus!.viewerCount,
           thumbnailUrl: twitchStatus!.thumbnailUrl,
           startedAt: twitchStatus!.startedAt,
+          category: twitchStatus!.category,
         },
         kick: {
           isLive: true,
@@ -48,6 +53,7 @@ async function fetchFreshData(): Promise<StreamStatus[]> {
           viewerCount: kickStatus!.viewerCount,
           thumbnailUrl: kickStatus!.thumbnailUrl,
           startedAt: kickStatus!.startedAt,
+          category: kickStatus!.category,
         },
       };
     }
@@ -60,6 +66,7 @@ async function fetchFreshData(): Promise<StreamStatus[]> {
           viewerCount: kickStatus!.viewerCount,
           thumbnailUrl: kickStatus!.thumbnailUrl,
           startedAt: kickStatus!.startedAt,
+          category: kickStatus!.category,
         },
       };
     }
@@ -72,6 +79,7 @@ async function fetchFreshData(): Promise<StreamStatus[]> {
           viewerCount: twitchStatus!.viewerCount,
           thumbnailUrl: twitchStatus!.thumbnailUrl,
           startedAt: twitchStatus!.startedAt,
+          category: twitchStatus!.category,
         },
       };
     }
@@ -103,8 +111,11 @@ export async function getStreams(): Promise<StreamStatus[]> {
     lastFetchTime = now;
     const liveCount = cachedResults.filter((s) => s.isLive).length;
     const dualCount = cachedResults.filter((s) => s.platform === "both").length;
+    const gtaCount = cachedResults.filter(
+      (s) => s.isLive && s.category === "Grand Theft Auto V",
+    ).length;
     console.log(
-      `[cache] cached ${cachedResults.length} streamers, ${liveCount} live, ${dualCount} dual-streaming`,
+      `[cache] cached ${cachedResults.length} streamers, ${liveCount} live, ${gtaCount} in city, ${dualCount} dual-streaming`,
     );
     return cachedResults;
   } catch (error) {

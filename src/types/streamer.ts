@@ -18,6 +18,7 @@ export interface StreamStatus extends Streamer {
   viewerCount?: number;
   thumbnailUrl?: string;
   startedAt?: string;
+  category?: string;
   twitch?: PlatformStatus;
   kick?: PlatformStatus;
 }
