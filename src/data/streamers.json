@@ -3,1134 +3,1563 @@
     "name": "0Reed",
     "twitchUsername": "0Reed",
     "kickUsername": "0Reed",
-    "character": "reed dankleaf"
+    "characters": [
+      "reed dankleaf"
+    ]
   },
   {
     "name": "25Daves",
     "twitchUsername": "25Daves",
     "kickUsername": "",
-    "character": "bobby charles"
+    "characters": [
+      "bobby charles"
+    ]
   },
   {
     "name": "4hbunger",
     "twitchUsername": "4hbunger",
     "kickUsername": "",
-    "character": "frederick 'fregg' white"
+    "characters": [
+      "frederick 'fregg' white"
+    ]
   },
   {
     "name": "4head",
     "twitchUsername": "4head",
     "kickUsername": "4head",
-    "character": "aubrey '4head' webster"
+    "characters": [
+      "aubrey '4head' webster"
+    ]
   },
   {
     "name": "52chains",
     "twitchUsername": "52chains",
     "kickUsername": "52chains",
-    "character": "carmine costello"
+    "characters": [
+      "carmine costello"
+    ]
+  },
+  {
+    "name": "8bit_beni",
+    "twitchUsername": "8bit_beni",
+    "kickUsername": "",
+    "characters": ["vill ager"]
   },
   {
     "name": "abdulhd",
     "twitchUsername": "abdulhd",
     "kickUsername": "abdulhd",
-    "character": "abdul ALRahim"
+    "characters": [
+      "abdul ALRahim"
+    ]
   },
   {
     "name": "afro",
     "twitchUsername": "afro",
     "kickUsername": "afro",
-    "character": "dexx martin"
+    "characters": [
+      "dexx martin"
+    ]
   },
   {
     "name": "aheeyuh",
     "twitchUsername": "aheeyuh",
     "kickUsername": "",
-    "character": "normie reece"
+    "characters": [
+      "normie reece"
+    ]
   },
   {
     "name": "airborne",
     "twitchUsername": "airborne",
     "kickUsername": "",
-    "character": "dennis labarre"
+    "characters": [
+      "dennis labarre"
+    ]
   },
   {
     "name": "akamonkey",
     "twitchUsername": "akamonkey",
     "kickUsername": "",
-    "character": "arturo ortiz"
+    "characters": [
+      "arturo ortiz"
+    ]
+  },
+  {
+    "name": "alex_3mm",
+    "twitchUsername": "alex_3mm",
+    "kickUsername": "",
+    "characters": ["leo sparks"]
   },
   {
     "name": "angelknivez",
     "twitchUsername": "angelknivez",
     "kickUsername": "angelknivez",
-    "character": "giavanna costello"
+    "characters": [
+      "giavanna costello"
+    ]
   },
   {
     "name": "anthonyz",
     "twitchUsername": "anthonyz",
     "kickUsername": "anthonyz",
-    "character": "tony corleone"
+    "characters": [
+      "tony corleone"
+    ]
   },
   {
     "name": "arckon",
     "twitchUsername": "arckon",
     "kickUsername": "arckon",
-    "character": "beric johnson"
+    "characters": [
+      "beric johnson"
+    ]
   },
   {
     "name": "artbybaha",
     "twitchUsername": "artbybaha",
     "kickUsername": "artbybaha",
-    "character": "cuddles fish"
+    "characters": [
+      "cuddles fish"
+    ]
   },
   {
     "name": "ash",
     "twitchUsername": "ash",
     "kickUsername": "ash",
-    "character": "ash ketchup"
+    "characters": [
+      "ash ketchup"
+    ]
   },
   {
     "name": "ashi",
     "twitchUsername": "ashi",
     "kickUsername": "ashi",
-    "character": "fiona stewart"
+    "characters": [
+      "fiona stewart"
+    ]
   },
   {
     "name": "ashlynn",
     "twitchUsername": "ashlynn",
     "kickUsername": "ashlynn",
-    "character": "brenda pancakes"
+    "characters": [
+      "brenda pancakes"
+    ]
   },
   {
     "name": "atinyhorse",
     "twitchUsername": "atinyhorse",
     "kickUsername": "atinyhorse",
-    "character": "anthony 'tiny tony' ricci"
+    "characters": [
+      "anthony 'tiny tony' ricci"
+    ]
   },
   {
     "name": "auriellis",
     "twitchUsername": "auriellis",
     "kickUsername": "",
-    "character": "ursula leichenberg"
+    "characters": [
+      "ursula leichenberg"
+    ]
   },
   {
     "name": "austin_bean",
     "twitchUsername": "austin_bean",
     "kickUsername": "",
-    "character": "austin bean"
+    "characters": [
+      "austin bean"
+    ]
   },
   {
     "name": "b_hoopla",
     "twitchUsername": "b_hoopla",
     "kickUsername": "",
-    "character": "ramello porter"
+    "characters": [
+      "ramello porter"
+    ]
   },
   {
     "name": "baffty",
     "twitchUsername": "baffty",
     "kickUsername": "",
-    "character": "matthew colby"
+    "characters": [
+      "matthew colby"
+    ]
   },
   {
     "name": "bananahead_og",
     "twitchUsername": "bananahead_og",
     "kickUsername": "",
-    "character": "nana banana"
+    "characters": [
+      "nana banana"
+    ]
   },
   {
     "name": "bazzagazza",
     "twitchUsername": "bazzagaza",
     "kickUsername": "",
-    "character": "barry benson"
+    "characters": [
+      "barry benson"
+    ]
   },
   {
     "name": "biotox",
     "twitchUsername": "biotox",
     "kickUsername": "biotox",
-    "character": "lars 'bjorn the barbarian' haverford"
+    "characters": [
+      "lars 'bjorn the barbarian' haverford"
+    ]
   },
   {
     "name": "blau",
     "twitchUsername": "blau",
     "kickUsername": "",
-    "character": "mickey sinclaire"
+    "characters": [
+      "mickey sinclaire"
+    ]
   },
   {
     "name": "bluebonnetrp",
     "twitchUsername": "bluebonnetrp",
     "kickUsername": "",
-    "character": "judas 'jt' thompson"
+    "characters": [
+      "judas 'jt' thompson"
+    ]
   },
   {
     "name": "brookeab",
     "twitchUsername": "brookeab",
     "kickUsername": "",
-    "character": "abby brooks"
+    "characters": [
+      "abby brooks"
+    ]
   },
   {
     "name": "broxh_",
     "twitchUsername": "",
     "kickUsername": "",
-    "character": "maugaroa 'broxh' kava"
+    "characters": [
+      "maugaroa 'broxh' kava"
+    ]
   },
   {
     "name": "buddha",
     "twitchUsername": "buddha",
     "kickUsername": "buddha",
-    "character": "lang buddha"
+    "characters": [
+      "lang buddha"
+    ]
   },
   {
     "name": "burn",
     "twitchUsername": "burn",
     "kickUsername": "burn",
-    "character": ""
+    "characters": []
   },
   {
     "name": "burtlington",
     "twitchUsername": "burtlington",
     "kickUsername": "",
-    "character": "marty malone"
+    "characters": [
+      "marty malone"
+    ]
   },
   {
     "name": "capped",
     "twitchUsername": "capped",
     "kickUsername": "capped",
-    "character": "capped 'pigeon' terranova"
+    "characters": [
+      "capped 'pigeon' terranova"
+    ]
   },
   {
     "name": "carmen",
     "twitchUsername": "carmen",
     "kickUsername": "",
-    "character": "carmella corset"
+    "characters": [
+      "carmella corset"
+    ]
   },
   {
     "name": "catherinereel",
     "twitchUsername": "catherinereel",
     "kickUsername": "",
-    "character": "dotty cradock"
+    "characters": [
+      "dotty cradock"
+    ]
   },
   {
     "name": "charli",
     "twitchUsername": "charli",
     "kickUsername": "",
-    "character": "georgina 'windsong' williams"
+    "characters": [
+      "georgina 'windsong' williams"
+    ]
   },
   {
     "name": "chatterbox",
     "twitchUsername": "chatterbox",
     "kickUsername": "chatterbox",
-    "character": "jagger 'chatterbox' gerardy"
+    "characters": [
+      "jagger 'chatterbox' gerardy"
+    ]
   },
   {
     "name": "chickenkeev",
     "twitchUsername": "chickenkeev",
     "kickUsername": "",
-    "character": "frank skinner"
+    "characters": [
+      "frank skinner"
+    ]
   },
   {
     "name": "chidori_senpai",
     "twitchUsername": "chidori_senpai",
     "kickUsername": "",
-    "character": "catherina 'cat' gonzalez"
+    "characters": [
+      "catherina 'cat' gonzalez"
+    ]
   },
   {
     "name": "chillypanda",
     "twitchUsername": "chillypanda",
     "kickUsername": "chillypanda",
-    "character": "lilly bogorov"
+    "characters": [
+      "lilly bogorov"
+    ]
   },
   {
     "name": "christombstone",
     "twitchUsername": "christombstone",
     "kickUsername": "",
-    "character": "flop dugong"
+    "characters": [
+      "flop dugong"
+    ]
   },
   {
     "name": "claytonerp",
     "twitchUsername": "claytonerp",
     "kickUsername": "claytonerp",
-    "character": "jebediah jenkins"
+    "characters": [
+      "jebediah jenkins"
+    ]
   },
   {
     "name": "connorcronus",
     "twitchUsername": "connorcronus",
     "kickUsername": "connorcronus",
-    "character": "isaac smith"
+    "characters": [
+      "isaac smith"
+    ]
   },
   {
     "name": "crayonponyfish",
     "twitchUsername": "",
     "kickUsername": "",
-    "character": "wynona fontaine"
+    "characters": [
+      "wynona fontaine"
+    ]
   },
   {
     "name": "crocc",
     "twitchUsername": "crocc",
     "kickUsername": "crocc",
-    "character": "vittorio dicenzo"
+    "characters": [
+      "vittorio dicenzo"
+    ]
   },
   {
     "name": "crystalst",
     "twitchUsername": "crystalst",
     "kickUsername": "crystalst",
-    "character": "crystal clear"
+    "characters": [
+      "crystal clear"
+    ]
   },
   {
     "name": "curvyelephant",
     "twitchUsername": "curvyelephant",
     "kickUsername": "",
-    "character": "matt dark-rhodes"
+    "characters": [
+      "matt dark-rhodes"
+    ]
   },
   {
     "name": "curvyllama",
     "twitchUsername": "curvyllama",
     "kickUsername": "",
-    "character": "lorenzo lezar"
+    "characters": [
+      "lorenzo lezar"
+    ]
   },
   {
     "name": "cydrose",
     "twitchUsername": "cydrose",
     "kickUsername": "",
-    "character": "maeve wolf"
+    "characters": [
+      "maeve wolf"
+    ]
   },
   {
     "name": "dasmehdi",
     "twitchUsername": "dasmehdi",
     "kickUsername": "dasmehdi",
-    "character": "brian knight"
+    "characters": [
+      "brian knight",
+      "nino chavez"
+    ]
   },
   {
     "name": "daveybe",
     "twitchUsername": "daveybe",
     "kickUsername": "",
-    "character": "pip deleham"
+    "characters": [
+      "pip deleham"
+    ]
   },
   {
     "name": "deansocool",
     "twitchUsername": "deansocool",
     "kickUsername": "deansocool",
-    "character": "den shiesty"
+    "characters": [
+      "den shiesty"
+    ]
   },
   {
     "name": "delvernaysh",
     "twitchUsername": "",
     "kickUsername": "",
-    "character": "delver lee"
+    "characters": [
+      "delver lee"
+    ]
   },
   {
     "name": "dimoak",
     "twitchUsername": "dimoak",
     "kickUsername": "",
-    "character": "beverly 'brekkers' brekker"
+    "characters": [
+      "beverly 'brekkers' brekker"
+    ]
   },
   {
     "name": "disbearex",
     "twitchUsername": "disbearex",
     "kickUsername": "",
-    "character": "oki doki"
+    "characters": [
+      "oki doki"
+    ]
   },
   {
     "name": "docwizard",
     "twitchUsername": "docwizard",
     "kickUsername": "",
-    "character": "terrance james 'tj' walker"
+    "characters": [
+      "terrance james 'tj' walker"
+    ]
   },
   {
     "name": "eagleaye",
     "twitchUsername": "eagleaye",
     "kickUsername": "eagleaye",
-    "character": "eve summers"
+    "characters": [
+      "eve summers"
+    ]
   },
   {
     "name": "elfiealliiee",
     "twitchUsername": "elfalliiee",
     "kickUsername": "",
-    "character": "autumn perry"
+    "characters": [
+      "autumn perry"
+    ]
   },
   {
     "name": "enevun",
     "twitchUsername": "enevun",
     "kickUsername": "",
-    "character": "maximillian angel"
+    "characters": [
+      "maximillian angel"
+    ]
   },
   {
     "name": "esfandtv",
     "twitchUsername": "esfandtv",
     "kickUsername": "esfandtv",
-    "character": "cletus cornwood"
+    "characters": [
+      "cletus cornwood"
+    ]
   },
   {
     "name": "fahrenheit",
     "twitchUsername": "fahrenheit",
     "kickUsername": "fahrenheit",
-    "character": "ilya karishnikov"
+    "characters": [
+      "ilya karishnikov"
+    ]
   },
   {
     "name": "favorite",
     "twitchUsername": "favorite",
     "kickUsername": "",
-    "character": "evelyn thompson"
+    "characters": [
+      "evelyn thompson"
+    ]
   },
   {
     "name": "firecrackthat",
     "twitchUsername": "firecrackthat",
     "kickUsername": "",
-    "character": "stumbles fumbles"
+    "characters": [
+      "stumbles fumbles"
+    ]
+  },
+  {
+    "name": "frododachi",
+    "twitchUsername": "frododachi",
+    "kickUsername": "",
+    "characters": ["frodo dacci"]
   },
   {
     "name": "fuslie",
     "twitchUsername": "fuslie",
     "kickUsername": "",
-    "character": "april fooze"
+    "characters": [
+      "april fooze"
+    ]
   },
   {
     "name": "fyzicul",
     "twitchUsername": "fyzicul",
     "kickUsername": "fyzicul",
-    "character": "lando stormborn"
+    "characters": [
+      "lando stormborn"
+    ]
   },
   {
     "name": "garek",
     "twitchUsername": "garek",
     "kickUsername": "",
-    "character": "burt 'gloryon' beans-stewart"
+    "characters": [
+      "burt 'gloryon' beans-stewart"
+    ]
   },
   {
     "name": "geega",
     "twitchUsername": "geega",
     "kickUsername": "geega",
-    "character": "giovanna 'gigi' gambino"
+    "characters": [
+      "giovanna 'gigi' gambino"
+    ]
   },
   {
     "name": "ggqf",
     "twitchUsername": "ggqf",
     "kickUsername": "",
-    "character": "stanley 'stagdancer' lessfield"
+    "characters": [
+      "stanley 'stagdancer' lessfield"
+    ]
   },
   {
     "name": "gingersnap_",
     "twitchUsername": "gingersnap_",
     "kickUsername": "",
-    "character": "sophie sanders"
+    "characters": [
+      "sophie sanders"
+    ]
   },
   {
     "name": "givemeuhminute",
     "twitchUsername": "givemeuhminute",
     "kickUsername": "givemeuhminute",
-    "character": "benicio delgado"
+    "characters": [
+      "benicio delgado"
+    ]
   },
   {
     "name": "glitterglock19",
     "twitchUsername": "glitterglock19",
     "kickUsername": "glitterglock19",
-    "character": "hailey maxwell"
+    "characters": [
+      "hailey maxwell"
+    ]
   },
   {
     "name": "grammthegibbon",
     "twitchUsername": "gramthegibbon",
     "kickUsername": "grammthegibbon",
-    "character": "stelio lambros"
+    "characters": [
+      "stelio lambros"
+    ]
   },
   {
     "name": "gutturalsteve",
     "twitchUsername": "gutturalsteve",
     "kickUsername": "",
-    "character": "tomathy steampipe"
+    "characters": [
+      "tomathy steampipe"
+    ]
   },
   {
     "name": "harry",
     "twitchUsername": "harry",
     "kickUsername": "harry",
-    "character": "harry brown"
+    "characters": [
+      "harry brown"
+    ]
   },
   {
     "name": "heyimzed",
     "twitchUsername": "heyimzed",
     "kickUsername": "heyimzed",
-    "character": "edbert ropeburn"
+    "characters": [
+      "edbert ropeburn"
+    ]
   },
   {
     "name": "hogshund",
     "twitchUsername": "hogshund",
     "kickUsername": "hogshund",
-    "character": "osvaldo pingafria"
+    "characters": [
+      "osvaldo pingafria"
+    ]
   },
   {
     "name": "hol_stream",
     "twitchUsername": "hol_stream",
     "kickUsername": "",
-    "character": "sybil"
+    "characters": [
+      "sybil"
+    ]
   },
   {
     "name": "hulzyrp",
     "twitchUsername": "hulzyrp",
     "kickUsername": "",
-    "character": "joseph gambini"
+    "characters": [
+      "joseph gambini"
+    ]
   },
   {
     "name": "ikitty",
     "twitchUsername": "ikitty",
     "kickUsername": "ikitty",
-    "character": "kitty stenberg-dream"
+    "characters": [
+      "kitty stenberg-dream"
+    ]
+  },
+  {
+    "name": "imaceinhd",
+    "twitchUsername": "imaceinhd",
+    "kickUsername": "",
+    "characters": ["jonah sloe"]
   },
   {
     "name": "itsholmes",
     "twitchUsername": "itsholmes",
     "kickUsername": "",
-    "character": "andre tyson"
+    "characters": [
+      "andre tyson"
+    ]
   },
   {
     "name": "itsjustasummerjob",
     "twitchUsername": "itsjustasummerjob",
     "kickUsername": "itsjustasummerjob",
-    "character": "sabith 'bunny' cohen"
+    "characters": [
+      "sabith 'bunny' cohen"
+    ]
   },
   {
     "name": "itsleslie",
     "twitchUsername": "itsleslie",
     "kickUsername": "itsleslie",
-    "character": "leyla nightingale of embervale"
+    "characters": [
+      "leyla nightingale of embervale"
+    ]
   },
   {
     "name": "ittszach",
     "twitchUsername": "ittszaxch",
     "kickUsername": "ittszach",
-    "character": "andrew 'andy' fisher"
+    "characters": [
+      "andrew 'andy' fisher"
+    ]
   },
   {
     "name": "jack",
     "twitchUsername": "jack",
     "kickUsername": "jack",
-    "character": "jack 'cookie' cortair"
+    "characters": [
+      "jack 'cookie' cortair"
+    ]
   },
   {
     "name": "jennybeartv",
     "twitchUsername": "jennybeartv",
     "kickUsername": "",
-    "character": "peach chee"
+    "characters": [
+      "peach chee"
+    ]
   },
   {
     "name": "jonthebroski",
     "twitchUsername": "jonthebroski",
     "kickUsername": "jonthebroski",
-    "character": "denzel williams"
+    "characters": [
+      "denzel williams"
+    ]
   },
   {
     "name": "justrebexa",
     "twitchUsername": "justrebexa",
     "kickUsername": "",
-    "character": "violet waters"
+    "characters": [
+      "violet waters"
+    ]
   },
   {
     "name": "kaelea",
     "twitchUsername": "kaelea",
     "kickUsername": "",
-    "character": "eliza d. stellano"
+    "characters": [
+      "eliza d. stellano"
+    ]
   },
   {
     "name": "kate",
     "twitchUsername": "kate",
     "kickUsername": "kate",
-    "character": "veronica mars"
+    "characters": [
+      "veronica mars"
+    ]
   },
   {
     "name": "kemony",
     "twitchUsername": "kemony",
     "kickUsername": "kemony",
-    "character": "susie carmichael"
+    "characters": [
+      "susie carmichael"
+    ]
   },
   {
     "name": "kingjayclouted",
     "twitchUsername": "kingjayclouted",
     "kickUsername": "",
-    "character": "gregory johnson"
+    "characters": [
+      "gregory johnson"
+    ]
   },
   {
     "name": "kittenqg",
     "twitchUsername": "kittenqg",
     "kickUsername": "",
-    "character": "lily night-sky"
+    "characters": [
+      "lily night-sky"
+    ]
   },
   {
     "name": "kiva",
     "twitchUsername": "kiva",
     "kickUsername": "kiva",
-    "character": "andy jones"
+    "characters": [
+      "andy jones"
+    ]
   },
   {
     "name": "kiwo",
     "twitchUsername": "kiwo",
     "kickUsername": "",
-    "character": "lauren forcer"
+    "characters": [
+      "lauren forcer"
+    ]
   },
   {
     "name": "koil",
     "twitchUsername": "koil",
     "kickUsername": "koil",
-    "character": "kael soze"
+    "characters": [
+      "kael soze"
+    ]
   },
   {
     "name": "kokobananaman",
     "twitchUsername": "kokobananaman",
     "kickUsername": "",
-    "character": "tex graves"
+    "characters": [
+      "tex graves"
+    ]
+  },
+  {
+    "name": "koszull",
+    "twitchUsername": "koszull",
+    "kickUsername": "",
+    "characters": ["jack vos"]
   },
   {
     "name": "kyle",
     "twitchUsername": "kyle",
     "kickUsername": "kyle",
-    "character": "kyle pred"
+    "characters": [
+      "kyle pred"
+    ]
   },
   {
     "name": "kyliebitkin",
     "twitchUsername": "kyliebitkin",
     "kickUsername": "kyliebitkin",
-    "character": "brittany angel"
+    "characters": [
+      "brittany angel"
+    ]
   },
   {
     "name": "ladydima",
     "twitchUsername": "ladydima",
     "kickUsername": "",
-    "character": "raia kaine"
+    "characters": [
+      "raia kaine"
+    ]
   },
   {
     "name": "leahstoo",
     "twitchUsername": "leahstoo",
     "kickUsername": "",
-    "character": "princess elena"
+    "characters": [
+      "princess elena"
+    ]
   },
   {
     "name": "lilsilsanya",
     "twitchUsername": "lilsilsanya",
     "kickUsername": "",
-    "character": "sanya del rolo"
+    "characters": [
+      "sanya del rolo"
+    ]
+  },
+  {
+    "name": "lilypichu",
+    "twitchUsername": "lilypichu",
+    "kickUsername": "",
+    "characters": ["tulip peach"]
   },
   {
     "name": "lirik",
     "twitchUsername": "lirik",
     "kickUsername": "",
-    "character": "avon barksdale"
+    "characters": [
+      "avon barksdale"
+    ]
   },
   {
     "name": "lisajfc",
     "twitchUsername": "lisajfc",
     "kickUsername": "lisajfc",
-    "character": "opal price"
+    "characters": [
+      "opal price"
+    ]
   },
   {
     "name": "lozdog",
     "twitchUsername": "lozdog",
     "kickUsername": "",
-    "character": "lilith fulker"
+    "characters": [
+      "lilith fulker"
+    ]
   },
   {
     "name": "lt_custard",
     "twitchUsername": "lt_custard",
     "kickUsername": "lt_custard",
-    "character": "kian mcnulty"
+    "characters": [
+      "kian mcnulty"
+    ]
   },
   {
     "name": "lysium",
     "twitchUsername": "lysium",
     "kickUsername": "lysium",
-    "character": "benji ramos"
+    "characters": [
+      "benji ramos"
+    ]
   },
   {
     "name": "madmoiselle",
     "twitchUsername": "madmoiselle",
     "kickUsername": "",
-    "character": "pixie tarantino"
+    "characters": [
+      "pixie tarantino"
+    ]
   },
   {
     "name": "malcolmglass",
     "twitchUsername": "malcolmglass",
     "kickUsername": "",
-    "character": "malcolm nekoda"
+    "characters": [
+      "malcolm nekoda"
+    ]
   },
   {
     "name": "margothesnail",
     "twitchUsername": "margothesnail",
     "kickUsername": "margothesnail",
-    "character": "margo escargot"
+    "characters": [
+      "margo escargot"
+    ]
   },
   {
     "name": "masonshortland",
     "twitchUsername": "masonshortland",
     "kickUsername": "masonshortland",
-    "character": "clark 'flash' mason"
+    "characters": [
+      "clark 'flash' mason"
+    ]
   },
   {
     "name": "meerkatsouprp",
     "twitchUsername": "meerkatsouprp",
     "kickUsername": "",
-    "character": "deva vale"
+    "characters": [
+      "deva vale"
+    ]
   },
   {
     "name": "mekabear",
     "twitchUsername": "mekabear",
     "kickUsername": "",
-    "character": "erin cox"
+    "characters": [
+      "erin cox"
+    ]
   },
   {
     "name": "melodymaeee",
     "twitchUsername": "melodymaeee",
     "kickUsername": "",
-    "character": "jasmine winters"
+    "characters": [
+      "jasmine winters"
+    ]
   },
   {
     "name": "mfwarlock",
     "twitchUsername": "mfwarlock",
     "kickUsername": "mfwarlock",
-    "character": "skipper jones"
+    "characters": [
+      "skipper jones"
+    ]
   },
   {
     "name": "mick",
     "twitchUsername": "mick",
     "kickUsername": "",
-    "character": "gladys berry"
+    "characters": [
+      "gladys berry"
+    ]
   },
   {
     "name": "middleditch",
     "twitchUsername": "middleditch",
     "kickUsername": "middleditch",
-    "character": "stanley tuttles"
+    "characters": [
+      "stanley tuttles"
+    ]
   },
   {
     "name": "miltontpike1",
     "twitchUsername": "miltontpike1",
     "kickUsername": "",
-    "character": "kiki chanel"
+    "characters": [
+      "kiki chanel"
+    ]
   },
   {
     "name": "minksofmars",
     "twitchUsername": "minksofmars",
     "kickUsername": "",
-    "character": "charlotte 'lottie' mae"
+    "characters": [
+      "charlotte 'lottie' mae"
+    ]
   },
   {
     "name": "missbombastic",
     "twitchUsername": "missbombastic",
     "kickUsername": "missbombastic",
-    "character": "ruby york"
+    "characters": [
+      "ruby york"
+    ]
   },
   {
     "name": "mollyruu",
     "twitchUsername": "mollyruu",
     "kickUsername": "mollyruu",
-    "character": "elizabeth 'lizzie' byrne"
+    "characters": [
+      "elizabeth 'lizzie' byrne"
+    ]
   },
   {
     "name": "mrmoonshouse",
     "twitchUsername": "mrmoonshouse",
     "kickUsername": "",
-    "character": "freddy price"
+    "characters": [
+      "freddy price"
+    ]
   },
   {
     "name": "mungo",
     "twitchUsername": "mungo",
     "kickUsername": "",
-    "character": "bobby 'bonbon' beldrum"
+    "characters": [
+      "bobby 'bonbon' beldrum"
+    ]
   },
   {
     "name": "nakkida",
     "twitchUsername": "nakkida",
     "kickUsername": "nakkida",
-    "character": "tessa lamb"
+    "characters": [
+      "tessa lamb"
+    ]
   },
   {
     "name": "natekarama",
     "twitchUsername": "natekarama",
     "kickUsername": "natekarama",
-    "character": "nate 'sneaky' karama"
+    "characters": [
+      "nate 'sneaky' karama"
+    ]
   },
   {
     "name": "neskrp",
     "twitchUsername": "neskrp",
     "kickUsername": "",
-    "character": "duncan fenwell"
+    "characters": [
+      "duncan fenwell"
+    ]
   },
   {
     "name": "nidas",
     "twitchUsername": "nidas",
     "kickUsername": "",
-    "character": "ingevar 'ak' falk"
+    "characters": [
+      "ingevar 'ak' falk"
+    ]
   },
   {
     "name": "nmplol",
     "twitchUsername": "nmplol",
     "kickUsername": "",
-    "character": "jason polam"
+    "characters": [
+      "jason polam"
+    ]
+  },
+  {
+    "name": "notwinford",
+    "twitchUsername": "notwinford",
+    "kickUsername": "notwinford",
+    "characters": ["fred mango"]
   },
   {
     "name": "novaaberries",
     "twitchUsername": "novaaberries",
     "kickUsername": "",
-    "character": "salena bishop"
+    "characters": [
+      "salena bishop"
+    ]
   },
   {
     "name": "novellusdea",
     "twitchUsername": "novellusdea",
     "kickUsername": "",
-    "character": "jacyn todd"
+    "characters": [
+      "jacyn todd"
+    ]
   },
   {
     "name": "omie",
     "twitchUsername": "omie",
     "kickUsername": "omie",
-    "character": "marty banks"
+    "characters": [
+      "marty banks"
+    ]
+  },
+  {
+    "name": "onesmolbumble",
+    "twitchUsername": "onesmolbumble",
+    "kickUsername": "",
+    "characters": ["delaena bryte"]
   },
   {
     "name": "peachtreemcgee",
     "twitchUsername": "peachtreemcgee",
     "kickUsername": "peachtreemcgee",
-    "character": "sunny savannah"
+    "characters": [
+      "sunny savannah"
+    ]
   },
   {
     "name": "peppo",
     "twitchUsername": "peppo",
     "kickUsername": "peppo",
-    "character": "edgar del castillo"
+    "characters": [
+      "edgar del castillo"
+    ]
   },
   {
     "name": "pokimane",
     "twitchUsername": "pokimane",
     "kickUsername": "",
-    "character": "jolie paul"
+    "characters": [
+      "jolie paul"
+    ]
   },
   {
     "name": "ray_c",
     "twitchUsername": "ray_c",
     "kickUsername": "rayc",
-    "character": "raymond romanov"
+    "characters": [
+      "raymond romanov"
+    ]
   },
   {
     "name": "revive",
     "twitchUsername": "revive",
     "kickUsername": "",
-    "character": "klevin 'k-murda' powers"
+    "characters": [
+      "klevin 'k-murda' powers"
+    ]
   },
   {
     "name": "revroach",
     "twitchUsername": "revroach",
     "kickUsername": "revroach",
-    "character": "happy d'klown"
+    "characters": [
+      "happy d'klown"
+    ]
   },
   {
     "name": "ripoozi",
     "twitchUsername": "ripoozi",
     "kickUsername": "ripoozi",
-    "character": "larry knox"
+    "characters": [
+      "larry knox"
+    ]
   },
   {
     "name": "rissabear",
     "twitchUsername": "rissabear",
     "kickUsername": "",
-    "character": "rissa berry"
+    "characters": [
+      "rissa berry"
+    ]
   },
   {
     "name": "rlly",
     "twitchUsername": "rlly",
     "kickUsername": "",
-    "character": "shelly smith"
+    "characters": [
+      "shelly smith"
+    ]
   },
   {
     "name": "roflgator",
     "twitchUsername": "roflgator",
     "kickUsername": "",
-    "character": "robert spowylamywanowski"
+    "characters": [
+      "robert spowylamywanowski"
+    ]
   },
   {
     "name": "rossthehsauce",
     "twitchUsername": "rossthehsauce",
     "kickUsername": "",
-    "character": "murrietta 'guppy' arlington"
+    "characters": [
+      "murrietta 'guppy' arlington"
+    ]
   },
   {
     "name": "roxmiral",
     "twitchUsername": "roxmiral",
     "kickUsername": "roxmiral",
-    "character": "sherry paie"
+    "characters": [
+      "sherry paie"
+    ]
   },
   {
     "name": "royalcreates",
     "twitchUsername": "royalcreates",
     "kickUsername": "",
-    "character": "wendy thomas"
+    "characters": [
+      "wendy thomas"
+    ]
   },
   {
     "name": "saiiren",
     "twitchUsername": "saiiren",
     "kickUsername": "",
-    "character": "ai musori"
+    "characters": [
+      "ai musori"
+    ]
   },
   {
     "name": "samoatss",
     "twitchUsername": "samoatss",
     "kickUsername": "",
-    "character": "marcus wade"
+    "characters": [
+      "marcus wade"
+    ]
   },
   {
     "name": "sannmann",
     "twitchUsername": "sannmann",
     "kickUsername": "",
-    "character": "finley milton"
+    "characters": [
+      "finley milton"
+    ]
   },
   {
     "name": "saturneighteen",
     "twitchUsername": "sasturneighteen",
     "kickUsername": "saturneighteen",
-    "character": "juno sweeny"
+    "characters": [
+      "juno sweeny"
+    ]
   },
   {
     "name": "sayeed",
     "twitchUsername": "sayeed",
     "kickUsername": "sayeed",
-    "character": "arush 'speedy' patel santana"
+    "characters": [
+      "arush 'speedy' patel santana"
+    ]
   },
   {
     "name": "sentry",
     "twitchUsername": "sentry",
     "kickUsername": "sentry",
-    "character": "ron otterman"
+    "characters": [
+      "ron otterman"
+    ]
   },
   {
     "name": "sgtapollo",
     "twitchUsername": "sgtapollo",
     "kickUsername": "sgtapollo",
-    "character": "omar keps"
+    "characters": [
+      "omar keps"
+    ]
   },
   {
     "name": "shadiko",
     "twitchUsername": "shadiko",
     "kickUsername": "shadiko",
-    "character": "alex mushkin-domino"
+    "characters": [
+      "alex mushkin-domino"
+    ]
+  },
+  {
+    "name": "silbullet",
+    "twitchUsername": "silbullet",
+    "kickUsername": "",
+    "characters": ["shawn maple"]
   },
   {
     "name": "silent",
     "twitchUsername": "silent",
     "kickUsername": "silent",
-    "character": "juan carlos 'flippy' hernandez"
+    "characters": [
+      "juan carlos 'flippy' hernandez"
+    ]
   },
   {
     "name": "skatebeard",
     "twitchUsername": "skatebeard",
     "kickUsername": "skatebeard",
-    "character": "scotty bard"
+    "characters": [
+      "scotty bard"
+    ]
   },
   {
     "name": "solidsinn",
     "twitchUsername": "solidsinn",
     "kickUsername": "",
-    "character": "roger thyne"
+    "characters": [
+      "roger thyne"
+    ]
   },
   {
     "name": "spaceboy",
     "twitchUsername": "spaceboy",
     "kickUsername": "",
-    "character": "james allison randal"
+    "characters": [
+      "james allison randal"
+    ]
   },
   {
     "name": "squeex",
     "twitchUsername": "squeex",
     "kickUsername": "",
-    "character": "vivek ramasquamy"
+    "characters": [
+      "vivek ramasquamy"
+    ]
   },
   {
     "name": "ssaab",
     "twitchUsername": "ssaab",
     "kickUsername": "saab",
-    "character": "alfonso 'al saab' sebastian"
+    "characters": [
+      "alfonso 'al saab' sebastian"
+    ]
   },
   {
     "name": "surefour",
     "twitchUsername": "surefour",
     "kickUsername": "",
-    "character": "fred 'necrolord' fredrick"
+    "characters": [
+      "fred 'necrolord' fredrick"
+    ]
   },
   {
     "name": "sykkuno",
     "twitchUsername": "sykkuno",
     "kickUsername": "",
-    "character": "yuno sykk"
+    "characters": [
+      "yuno sykk"
+    ]
   },
   {
     "name": "the_wizurd_",
     "twitchUsername": "the_wizurd_",
     "kickUsername": "",
-    "character": "chestanisberg andersonbergenson"
+    "characters": [
+      "chestanisberg andersonbergenson"
+    ]
   },
   {
     "name": "theeazylife",
     "twitchUsername": "theeazylife",
     "kickUsername": "",
-    "character": "brandon valentino"
+    "characters": [
+      "brandon valentino"
+    ]
   },
   {
     "name": "tinystunt",
     "twitchUsername": "tinystunt",
     "kickUsername": "",
-    "character": "bailey jade"
+    "characters": [
+      "bailey jade"
+    ]
   },
   {
     "name": "tjnv",
     "twitchUsername": "tjnv",
     "kickUsername": "tjnv",
-    "character": "charli 'cj' jones"
+    "characters": [
+      "charli 'cj' jones"
+    ]
   },
   {
     "name": "tobii",
     "twitchUsername": "tobii",
     "kickUsername": "tobii",
-    "character": "michael simone"
+    "characters": [
+      "michael simone"
+    ]
   },
   {
     "name": "totallynotbelltower",
     "twitchUsername": "totallynotbelltower",
     "kickUsername": "",
-    "character": "callista bell"
+    "characters": [
+      "callista bell"
+    ]
   },
   {
     "name": "townie",
     "twitchUsername": "townie",
     "kickUsername": "",
-    "character": "teddy booker"
+    "characters": [
+      "teddy booker"
+    ]
   },
   {
     "name": "travpiper",
     "twitchUsername": "travpiper",
     "kickUsername": "travpiper",
-    "character": "tyler peters"
+    "characters": [
+      "tyler peters"
+    ]
   },
   {
     "name": "traycee",
     "twitchUsername": "traycee",
     "kickUsername": "traycee",
-    "character": "lexi law"
+    "characters": [
+      "lexi law"
+    ]
   },
   {
     "name": "twinkles",
     "twitchUsername": "twinkles",
     "kickUsername": "",
-    "character": "eugene 'twinkles' anwar"
+    "characters": [
+      "eugene 'twinkles' anwar"
+    ]
   },
   {
     "name": "uberhaxornova",
     "twitchUsername": "uberhaxornova",
     "kickUsername": "",
-    "character": "siz fulker"
+    "characters": [
+      "siz fulker"
+    ]
   },
   {
     "name": "uhsnow",
     "twitchUsername": "uhsnow",
     "kickUsername": "",
-    "character": "jackie snow"
+    "characters": [
+      "jackie snow"
+    ]
   },
   {
     "name": "valkyrae",
     "twitchUsername": "valkyrae",
     "kickUsername": "",
-    "character": "ray mond"
+    "characters": [
+      "ray mond"
+    ]
   },
   {
     "name": "veibae",
     "twitchUsername": "veibae",
     "kickUsername": "",
-    "character": ""
+    "characters": []
   },
   {
     "name": "vigors",
     "twitchUsername": "vigors",
     "kickUsername": "",
-    "character": "yaeger demonblood"
+    "characters": [
+      "yaeger demonblood"
+    ]
   },
   {
     "name": "wakewilder",
     "twitchUsername": "wakewilder",
     "kickUsername": "",
-    "character": "jebediah 'beef' von wunder"
+    "characters": [
+      "jebediah 'beef' von wunder"
+    ]
   },
   {
     "name": "walnutcast",
     "twitchUsername": "walnutcast",
     "kickUsername": "",
-    "character": "brick james"
+    "characters": [
+      "brick james"
+    ]
   },
   {
     "name": "wavetf",
     "twitchUsername": "wavetf",
     "kickUsername": "",
-    "character": "mumbles fumbles"
+    "characters": [
+      "mumbles fumbles"
+    ]
   },
   {
     "name": "wetbow",
     "twitchUsername": "wetbow",
     "kickUsername": "wetbow",
-    "character": "party hardy"
+    "characters": [
+      "party hardy"
+    ]
   },
   {
     "name": "willneff",
     "twitchUsername": "willneff",
     "kickUsername": "",
-    "character": "james marco st. marco"
+    "characters": [
+      "james marco st. marco"
+    ]
   },
   {
     "name": "workszy",
     "twitchUsername": "workszy",
     "kickUsername": "",
-    "character": "william pepe"
+    "characters": [
+      "william pepe"
+    ]
   },
   {
     "name": "xiceman",
     "twitchUsername": "xiceman",
     "kickUsername": "xiceman",
-    "character": "mike bayo"
+    "characters": [
+      "mike bayo"
+    ]
   },
   {
     "name": "xqc",
     "twitchUsername": "xqc",
     "kickUsername": "xqc",
-    "character": "jean 'x' paul"
+    "characters": [
+      "jean 'x' paul"
+    ]
   },
   {
     "name": "yuukidav",
     "twitchUsername": "yuukidav",
     "kickUsername": "yuukidav",
-    "character": "lukas lavender"
+    "characters": [
+      "lukas lavender"
+    ]
   },
   {
     "name": "zaquelle",
     "twitchUsername": "zaquelle",
     "kickUsername": "",
-    "character": "mackenzie hayes"
+    "characters": [
+      "mackenzie hayes"
+    ]
   },
   {
     "name": "zaxx386",
     "twitchUsername": "zaxx386",
     "kickUsername": "",
-    "character": "moose knuckles"
+    "characters": [
+      "moose knuckles"
+    ]
   },
   {
     "name": "zerkaa",
     "twitchUsername": "zerkaa",
     "kickUsername": "zerkaa",
-    "character": "tommy tate"
+    "characters": [
+      "tommy tate"
+    ]
   },
   {
     "name": "zetark",
     "twitchUsername": "zetark",
     "kickUsername": "zetark",
-    "character": "luciano dicenzo"
+    "characters": [
+      "luciano dicenzo"
+    ]
   },
   {
     "name": "ziggy",
     "twitchUsername": "ziggy",
     "kickUsername": "",
-    "character": "norman bones"
+    "characters": [
+      "norman bones"
+    ]
   },
   {
     "name": "zshavair02",
     "twitchUsername": "zshavair02",
     "kickUsername": "",
-    "character": "imo 'rat king' malum"
+    "characters": [
+      "imo 'rat king' malum"
+    ]
   }
 ]
