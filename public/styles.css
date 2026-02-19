@@ -26,6 +26,9 @@ body {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   color: var(--nopixel-accent);
@@ -34,6 +37,9 @@ h1 {
 /* SEARCH */
 .search-container {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-input {
