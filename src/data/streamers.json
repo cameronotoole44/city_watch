@@ -56,6 +56,12 @@
     ]
   },
   {
+    "name": "acie",
+    "twitchUsername": "acie",
+    "kickUsername": "acie",
+    "characters": ["vee hernandez"]
+  },
+  {
     "name": "afro",
     "twitchUsername": "afro",
     "kickUsername": "afro",
@@ -96,12 +102,24 @@
     ]
   },
   {
+    "name": "alicat",
+    "twitchUsername": "alicat",
+    "kickUsername": "alicat",
+    "characters": ["esmerelda 'esme' pingafria"]
+  },
+  {
     "name": "altrah",
     "twitchUsername": "altrah",
     "kickUsername": "",
     "characters": [
       "vernon 'vern' winsmore"
     ]
+  },
+  {
+    "name": "alyssajeanaf",
+    "twitchUsername": "alyssajeanaf",
+    "kickUsername": "alyssajeanaf",
+    "characters": ["daphne malone"]
   },
   {
     "name": "angelknivez",
@@ -126,6 +144,12 @@
     "characters": [
       "beric johnson"
     ]
+  },
+  {
+    "name": "arktoz_onyxthane",
+    "twitchUsername": "arktoz_onyxthane",
+    "kickUsername": "arktoz_onyxthane",
+    "characters": ["charlie hawkins"]
   },
   {
     "name": "artbybaha",
@@ -216,6 +240,12 @@
     ]
   },
   {
+    "name": "belowthewaves",
+    "twitchUsername": "belowthewaves",
+    "kickUsername": "belowthewaves",
+    "characters": ["lucas lovesick"]
+  },
+  {
     "name": "biotox",
     "twitchUsername": "biotox",
     "kickUsername": "biotox",
@@ -232,12 +262,24 @@
     ]
   },
   {
+    "name": "bldrs",
+    "twitchUsername": "bldrs",
+    "kickUsername": "bldrs",
+    "characters": ["steve en"]
+  },
+  {
     "name": "bluebonnetrp",
     "twitchUsername": "bluebonnetrp",
     "kickUsername": "",
     "characters": [
       "judas 'jt' thompson"
     ]
+  },
+  {
+    "name": "bodoc",
+    "twitchUsername": "bodoc",
+    "kickUsername": "bodoc",
+    "characters": ["marley"]
   },
   {
     "name": "boostedwastaken",
@@ -517,6 +559,12 @@
     ]
   },
   {
+    "name": "dotnica",
+    "twitchUsername": "dotnica",
+    "kickUsername": "dotnica",
+    "characters": ["ginny gryffin"]
+  },
+  {
     "name": "dyoti",
     "twitchUsername": "dyoti",
     "kickUsername": "dyoti",
@@ -565,6 +613,12 @@
     ]
   },
   {
+    "name": "ewanruss",
+    "twitchUsername": "ewanruss",
+    "kickUsername": "ewanruss",
+    "characters": ["alfredo 'fredo' bonucci"]
+  },
+  {
     "name": "fahrenheit",
     "twitchUsername": "fahrenheit",
     "kickUsername": "fahrenheit",
@@ -579,6 +633,12 @@
     "characters": [
       "peri watson"
     ]
+  },
+  {
+    "name": "fanfan",
+    "twitchUsername": "fanfan",
+    "kickUsername": "fanfan",
+    "characters": ["fan 'fanny' fan"]
   },
   {
     "name": "favorite",
@@ -683,6 +743,12 @@
     "characters": [
       "hailey maxwell"
     ]
+  },
+  {
+    "name": "gopnikrp",
+    "twitchUsername": "gopnikrp",
+    "kickUsername": "gopnikrp",
+    "characters": ["luka kovačič"]
   },
   {
     "name": "grammthegibbon",
@@ -845,6 +911,12 @@
     ]
   },
   {
+    "name": "jason_plays_games",
+    "twitchUsername": "jason_plays_games",
+    "kickUsername": "jason_plays_games",
+    "characters": ["norman adams"]
+  },
+  {
     "name": "jennybeartv",
     "twitchUsername": "jennybeartv",
     "kickUsername": "",
@@ -909,6 +981,12 @@
     ]
   },
   {
+    "name": "kerazane",
+    "twitchUsername": "kerazane",
+    "kickUsername": "kerazane",
+    "characters": ["kol 'coco' cascade"]
+  },
+  {
     "name": "kinamazing",
     "twitchUsername": "kinamazing",
     "kickUsername": "",
@@ -923,6 +1001,12 @@
     "characters": [
       "gregory johnson"
     ]
+  },
+  {
+    "name": "kira_chan",
+    "twitchUsername": "kira_chan",
+    "kickUsername": "kira_chan",
+    "characters": ["hanabara mayberry"]
   },
   {
     "name": "kittenqg",
@@ -1005,6 +1089,18 @@
     ]
   },
   {
+    "name": "learningpr0cess",
+    "twitchUsername": "learningpr0cess",
+    "kickUsername": "learningpr0cess",
+    "characters": ["ben sillysigh"]
+  },
+  {
+    "name": "leelithato",
+    "twitchUsername": "leelithato",
+    "kickUsername": "leelithato",
+    "characters": ["lilly dubois"]
+  },
+  {
     "name": "letterjaye",
     "twitchUsername": "letterjaye",
     "kickUsername": "letterjaye",
@@ -1045,6 +1141,12 @@
     ]
   },
   {
+    "name": "lolzkat",
+    "twitchUsername": "lolzkat",
+    "kickUsername": "lolzkat",
+    "characters": ["lucia battoli"]
+  },
+  {
     "name": "lovendor",
     "twitchUsername": "lovendor",
     "kickUsername": "",
@@ -1067,6 +1169,12 @@
     "characters": [
       "kian mcnulty"
     ]
+  },
+  {
+    "name": "lunaoni",
+    "twitchUsername": "lunaoni",
+    "kickUsername": "lunaoni",
+    "characters": []
   },
   {
     "name": "lysium",
@@ -1389,12 +1497,36 @@
     ]
   },
   {
+    "name": "pmoney",
+    "twitchUsername": "pmoney",
+    "kickUsername": "pmoney",
+    "characters": ["pmoney"]
+  },
+  {
     "name": "pokimane",
     "twitchUsername": "pokimane",
     "kickUsername": "",
     "characters": [
       "jolie paul"
     ]
+  },
+  {
+    "name": "qmariox",
+    "twitchUsername": "qmariox",
+    "kickUsername": "qmariox",
+    "characters": ["fernando 'mario' reyes"]
+  },
+  {
+    "name": "raine",
+    "twitchUsername": "raine",
+    "kickUsername": "raine",
+    "characters": ["penelope farthing"]
+  },
+  {
+    "name": "raveesh1",
+    "twitchUsername": "raveesh1",
+    "kickUsername": "raveesh1",
+    "characters": ["yahya 'yaya' ahmed"]
   },
   {
     "name": "ray_c",
@@ -1477,6 +1609,12 @@
     ]
   },
   {
+    "name": "ruffpickle",
+    "twitchUsername": "ruffpickle",
+    "kickUsername": "ruffpickle",
+    "characters": ["paul hammerstein"]
+  },
+  {
     "name": "saiiren",
     "twitchUsername": "saiiren",
     "kickUsername": "",
@@ -1515,6 +1653,12 @@
     "characters": [
       "arush 'speedy' patel santana"
     ]
+  },
+  {
+    "name": "senorq",
+    "twitchUsername": "senorq",
+    "kickUsername": "senorq",
+    "characters": ["carlos santos"]
   },
   {
     "name": "sentry",
@@ -1659,6 +1803,12 @@
     "characters": [
       "nora thomas"
     ]
+  },
+  {
+    "name": "thebigmeech",
+    "twitchUsername": "thebigmeech",
+    "kickUsername": "thebigmeech",
+    "characters": ["pilbus shonley"]
   },
   {
     "name": "theeazylife",
@@ -1865,6 +2015,12 @@
     "characters": [
       "dante rivers"
     ]
+  },
+  {
+    "name": "youney",
+    "twitchUsername": "youney",
+    "kickUsername": "youney",
+    "characters": ["haze; 'derpy' grey"]
   },
   {
     "name": "yuukidav",
