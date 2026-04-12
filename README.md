@@ -4,7 +4,7 @@ real-time stream tracker for NoPixel whitelisted players across Twitch and Kick.
 
 answers the question: is [character] in the city right now?
 
-## **live**: https://citywatch-production.up.railway.app/
+## **live**: https://citywatch.up.railway.app/
 
 ## architecture
 
