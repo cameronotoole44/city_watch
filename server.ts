@@ -1,7 +1,10 @@
 import "dotenv/config";
 import { getStreams } from "./functions/api/streams";
+import { startIngestion } from "./src/services/ingestion";
 
 const PORT = process.env.PORT || 3000;
+
+startIngestion();
 
 async function handleRequest(req: Request): Promise<Response> {
   const url = new URL(req.url);
