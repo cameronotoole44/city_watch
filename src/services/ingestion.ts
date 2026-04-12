@@ -52,6 +52,15 @@ async function fetchAndStore(): Promise<void> {
       title: isLive ? (primary?.title ?? null) : null,
       category: isLive ? (primary?.category ?? null) : null,
       started_at: isLive ? (primary?.startedAt ?? null) : null,
+      thumbnail_url: isLive ? (twitch?.thumbnailUrl ?? null) : null,
+      twitch_title: twitchLive ? (twitch?.title ?? null) : null,
+      twitch_viewer_count: twitchLive ? (twitch?.viewerCount ?? null) : null,
+      twitch_started_at: twitchLive ? (twitch?.startedAt ?? null) : null,
+      twitch_category: twitchLive ? (twitch?.category ?? null) : null,
+      kick_title: kickLive ? (kick?.title ?? null) : null,
+      kick_viewer_count: kickLive ? (kick?.viewerCount ?? null) : null,
+      kick_started_at: kickLive ? (kick?.startedAt ?? null) : null,
+      kick_category: kickLive ? (kick?.category ?? null) : null,
     };
   });
 
