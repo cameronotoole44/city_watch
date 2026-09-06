@@ -28,6 +28,8 @@ interface KickV2Channel {
   };
 }
 
+let consecutive429 = 0;
+
 async function getChannelInfo(slug: string): Promise<KickV2Channel | null> {
   try {
     const response = await fetch(`https://kick.com/api/v2/channels/${slug}`, {
@@ -36,8 +38,15 @@ async function getChannelInfo(slug: string): Promise<KickV2Channel | null> {
       },
     });
 
+    if (response.status === 429) {
+      consecutive429++;
+      console.warn(`[Kick] 429 ${slug} (streak ${consecutive429})`);
+      return null;
+    }
+
+    consecutive429 = 0;
+
     if (!response.ok) {
-      await response.text();
       console.error(
         `[Kick] failed to fetch channel ${slug}: ${response.status}`,
       );
@@ -55,6 +64,8 @@ async function getChannelInfo(slug: string): Promise<KickV2Channel | null> {
 export async function getLiveStreams(
   streamers: Streamer[],
 ): Promise<StreamStatus[]> {
+  consecutive429 = 0;
+
   const kickStreamers = streamers.filter((s) => s.kickUsername);
 
   if (kickStreamers.length === 0) {
@@ -62,7 +73,7 @@ export async function getLiveStreams(
   }
 
   try {
-    const batchSize = 10;
+    const batchSize = 3;
     const results: (KickV2Channel | null)[] = [];
 
     for (let i = 0; i < kickStreamers.length; i += batchSize) {
@@ -72,10 +83,16 @@ export async function getLiveStreams(
       );
       results.push(...batchResults);
 
+      if (consecutive429 >= 5) {
+        console.warn("[Kick] rate limited, stopping this poll early");
+        break;
+      }
+
       if (i + batchSize < kickStreamers.length) {
-        await new Promise((resolve) => setTimeout(resolve, 100));
+        await new Promise((resolve) => setTimeout(resolve, 1500));
       }
     }
+
     const channelMap = new Map<string, KickV2Channel>();
     results.forEach((channel) => {
       if (channel) {
